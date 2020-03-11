@@ -53,6 +53,11 @@ def get_data_by_id(id):
 
 
 def get_ranks_by_id(id):
+    """
+
+       :param id: an app id
+       :return: data from 'daily ranks' tab for the app
+       """
     dict_infos = {}
     driver = Chrome()
     page = requests.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
