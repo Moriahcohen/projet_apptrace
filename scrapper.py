@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import datetime
 from selenium.webdriver import Chrome
 
+# clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
+# Moriah Cohen Scali and Roni Chauvart
 
 def get_date_apptrace():
     """
@@ -29,24 +31,24 @@ def get_data_by_id(id):
         name = soup.find('li', class_='apptitle').h1.text
         developer = soup.find('li', class_='apptitle').h2.a.span.text
         #create new dictinnary with all the data of the applciation
-        dic = {}
-        dic['Name app'] = name
-        dic['Developer'] = developer
-        dic['Price'] = soup.find('li', class_='apptype appstore').text
+        dic_app_details = {}
+        dic_app_details['Name app'] = name
+        dic_app_details['Developer'] = developer
+        dic_app_details['Price'] = soup.find('li', class_='apptype appstore').text
         for detail in app_detail.find_all('div', class_='infobox'):
-            dic[(detail.find('p', class_='title').text)] = (detail.find('p', class_='data').text)
+            dic_app_details[(detail.find('p', class_='title').text)] = (detail.find('p', class_='data').text)
         row_rating = app_detail.find('div', class_='row rating')
-        dic['Rating'] = row_rating.find('strong', itemprop='ratingValue').text + "/5"
-        dic['Ratings Count'] = row_rating.find('span', itemprop='ratingCount').text
-        dic['Description'] = app_detail.find('div', class_='t1c active_language').text
+        dic_app_details['Rating'] = row_rating.find('strong', itemprop='ratingValue').text + "/5"
+        dic_app_details['Ratings Count'] = row_rating.find('span', itemprop='ratingCount').text
+        dic_app_details['Description'] = app_detail.find('div', class_='t1c active_language').text
         count = 0
         for detail in soup.find('div', class_='table versions opened').find_all('div', class_="cell"):
             #print(detail.text)
             count += 1
-        dic['Number of versions'] = int(count / 2)
+        dic_app_details['Number of versions'] = int(count / 2)
 
         #print the dictionnary
-        for k, v in dic.items():
+        for k, v in dic_app_details.items():
             print(k, ":", v)
     except Exception as e:
         print(e)
@@ -58,8 +60,11 @@ def get_ranks_by_id(id):
        :param id: an app id
        :return: data from 'daily ranks' tab for the app
        """
-    dict_infos = {}
-    driver = Chrome()
+    dic_app_details = {}
+
+    #here we used chome_driver to scrapped some data, we needed to donwload the chromedriver package,
+    #so we needed to use the path to it:
+    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     page = requests.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
     soup = BeautifulSoup(page.content, 'lxml')
 
@@ -67,13 +72,13 @@ def get_ranks_by_id(id):
 
     for i, cat in enumerate(soup.find_all('a', class_='genre_selector')):
         if cat.text != 'Overall':
-            dict_infos['Category #' + str(i)] = cat.text
+            dic_app_details['Category #' + str(i)] = cat.text
 
     rankings = driver.find_elements_by_class_name("infobox")
     for ranking in rankings:
         ranking_title = ranking.find_element_by_class_name("title").text
         ranking_rank = ranking.find_element_by_class_name("data").text
-        dict_infos[ranking_title] = "#" + ranking_rank
+        dic_app_details[ranking_title] = "#" + ranking_rank
 
     try:
         rank_top_countries = driver.find_element_by_id("rankings_by_genre_top_countries")
@@ -81,7 +86,7 @@ def get_ranks_by_id(id):
         for country in top_countries:
             country_name = country.find_element_by_class_name("content").text
             country_rank = country.find_element_by_class_name("rank").text
-            dict_infos[country_name + ' Ranking'] = "#" + country_rank
+            dic_app_details[country_name + ' Ranking'] = "#" + country_rank
     except Exception:
         print("No ranking in top countries")
 
@@ -91,12 +96,12 @@ def get_ranks_by_id(id):
         for country in other_countries:
             country_name = country.find_element_by_class_name("content").text
             country_rank = country.find_element_by_class_name("rank").text
-            dict_infos[country_name + ' Ranking'] = "#" + country_rank
+            dic_app_details[country_name + ' Ranking'] = "#" + country_rank
     except Exception:
         print("No ranking in other countries")
 
-    for key in dict_infos:
-        print(key, ':', dict_infos[key])
+    for key in dic_app_details:
+        print(key, ':', dic_app_details[key])
 
     driver.close()
 
