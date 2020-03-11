@@ -36,7 +36,7 @@ def get_data_by_id(id):
         for detail in app_detail.find_all('div', class_='infobox'):
             dic[(detail.find('p', class_='title').text)] = (detail.find('p', class_='data').text)
         row_rating = app_detail.find('div', class_='row rating')
-        dic['Rating'] = row_rating.find('strong', itemprop='ratingValue').text
+        dic['Rating'] = row_rating.find('strong', itemprop='ratingValue').text + "/5"
         dic['Ratings Count'] = row_rating.find('span', itemprop='ratingCount').text
         dic['Description'] = app_detail.find('div', class_='t1c active_language').text
         count = 0
@@ -51,40 +51,54 @@ def get_data_by_id(id):
     except Exception as e:
         print(e)
 
+
 def get_ranks_by_id(id):
     dict_infos = {}
-    driver = Chrome("/Users/ronichauvart/chromedriver")
+    driver = Chrome()
     page = requests.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
     soup = BeautifulSoup(page.content, 'lxml')
 
     driver.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
 
-    head = soup.find('div', class_='app-database')
-
     for i, cat in enumerate(soup.find_all('a', class_='genre_selector')):
-        dict_infos['Cat' + str(i)] = cat.text
-
-    # info = soup.find('div', class_='infobox_area')
-    # for top in info.find_all('p', class_='title'):
-    #     rank = soup.find('p', class_='data')
-    #     dict_infos[top.text] = rank.text
+        if cat.text != 'Overall':
+            dict_infos['Category #' + str(i)] = cat.text
 
     rankings = driver.find_elements_by_class_name("infobox")
     for ranking in rankings:
         ranking_title = ranking.find_element_by_class_name("title").text
         ranking_rank = ranking.find_element_by_class_name("data").text
-        dict_infos[ranking_title] = ranking_rank
+        dict_infos[ranking_title] = "#" + ranking_rank
+
+    try:
+        rank_top_countries = driver.find_element_by_id("rankings_by_genre_top_countries")
+        top_countries = rank_top_countries.find_elements_by_class_name("cell")
+        for country in top_countries:
+            country_name = country.find_element_by_class_name("content").text
+            country_rank = country.find_element_by_class_name("rank").text
+            dict_infos[country_name + ' Ranking'] = "#" + country_rank
+    except Exception:
+        print("No ranking in top countries")
+
+    try:
+        rank_other_countries = driver.find_element_by_id("rankings_by_genre_world")
+        other_countries = rank_other_countries.find_elements_by_class_name("cell")
+        for country in other_countries:
+            country_name = country.find_element_by_class_name("content").text
+            country_rank = country.find_element_by_class_name("rank").text
+            dict_infos[country_name + ' Ranking'] = "#" + country_rank
+    except Exception:
+        print("No ranking in other countries")
 
     for key in dict_infos:
         print(key, ':', dict_infos[key])
 
-
     driver.close()
 
 
-
-#create a new set of id of application so we won't get any deplicates
+# create a new set of id of application so we won't get any deplicates
 id_app_set = {1031002863}
+
 
 def get_app_id_by_category_by_country(dictionary_countries,dictionary_categories):
     """
@@ -103,13 +117,14 @@ def get_app_id_by_category_by_country(dictionary_countries,dictionary_categories
                         id_tag = int(tag.find('div', class_='id').get('id'))
                         if id_tag not in id_app_set:
                             id_app_set.add(id_tag)
-                            print(country, dictionary_categories[key], cost)
+                            print("Scrapped for the first time in: " + country + "/" + dictionary_categories[key]+ "/" + cost)
                             get_data_by_id(id_tag)
                             get_ranks_by_id(id_tag)
                             print()
                             print(len(id_app_set))
                 except Exception as e:
                        print(e)
+
 
 def get_country_dic():
     """
@@ -147,7 +162,7 @@ def get_category_dic():
 def main():
     dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
-    get_app_id_by_category_by_country(dictionary_countries,dictionary_categories)
+    get_app_id_by_category_by_country(dictionary_countries, dictionary_categories)
 
 
 if __name__ == "__main__":
