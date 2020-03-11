@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import datetime
+from selenium.webdriver import Chrome
+
 
 def get_date_apptrace():
     """
@@ -46,9 +48,40 @@ def get_data_by_id(id):
         #print the dictionnary
         for k, v in dic.items():
             print(k, ":", v)
-        print()
     except Exception as e:
         print(e)
+
+def get_ranks_by_id(id):
+    dict_infos = {}
+    driver = Chrome("/Users/ronichauvart/chromedriver")
+    page = requests.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
+    soup = BeautifulSoup(page.content, 'lxml')
+
+    driver.get("https://www.apptrace.com/app/" + str(id) + "/ranks")
+
+    head = soup.find('div', class_='app-database')
+
+    for i, cat in enumerate(soup.find_all('a', class_='genre_selector')):
+        dict_infos['Cat' + str(i)] = cat.text
+
+    # info = soup.find('div', class_='infobox_area')
+    # for top in info.find_all('p', class_='title'):
+    #     rank = soup.find('p', class_='data')
+    #     dict_infos[top.text] = rank.text
+
+    rankings = driver.find_elements_by_class_name("infobox")
+    for ranking in rankings:
+        ranking_title = ranking.find_element_by_class_name("title").text
+        ranking_rank = ranking.find_element_by_class_name("data").text
+        dict_infos[ranking_title] = ranking_rank
+
+    for key in dict_infos:
+        print(key, ':', dict_infos[key])
+
+
+    driver.close()
+
+
 
 #create a new set of id of application so we won't get any deplicates
 id_app_set = {1031002863}
@@ -72,6 +105,8 @@ def get_app_id_by_category_by_country(dictionary_countries,dictionary_categories
                             id_app_set.add(id_tag)
                             print(country, dictionary_categories[key], cost)
                             get_data_by_id(id_tag)
+                            get_ranks_by_id(id_tag)
+                            print()
                             print(len(id_app_set))
                 except Exception as e:
                        print(e)
