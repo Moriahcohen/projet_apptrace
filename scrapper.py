@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 from selenium.webdriver import Chrome
 
+
 # clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
 # Moriah Cohen Scali and Roni Chauvart
 
@@ -29,7 +30,9 @@ def get_data_by_id(id):
         soup = BeautifulSoup(page, 'lxml')
         app_detail = soup.find('div', class_='app_details')
         name = soup.find('li', class_='apptitle').h1.text
-        developer = soup.find('li', class_='apptitle').h2.a.span.text
+        developer = soup.find('li', class_='apptitle').h2.a.text
+        url_dev = soup.find('li', class_='apptitle').h2.a.get('href')
+        get_dev_info(url_dev)
         #create new dictinnary with all the data of the applciation
         dic_app_details = {}
         dic_app_details['Name app'] = name
@@ -103,6 +106,7 @@ def get_ranks_by_id(id):
     for key in dic_app_details:
         print(key, ':', dic_app_details[key])
 
+
     driver.close()
 
 
@@ -149,6 +153,7 @@ def get_country_dic():
     for country in country_chart_page.find_all('li', class_='invisible'):
         dict_country[country.text] = country.a.get('data-link')
     return dict_country
+    return dict_country
 
 
 def get_category_dic():
@@ -168,6 +173,17 @@ def get_category_dic():
         del dic_category[str(num)]
     return dic_category
 
+def get_dev_info(dev):
+    page = requests.get('https://www.apptrace.com' + dev).text
+    soup = BeautifulSoup(page, 'lxml')
+    dev_info = []
+    for tag in soup.find('div', class_='app-database devs'):
+        for i in soup.find_all('li', class_='apptype'):
+            dev_info.append(i.span.text)
+    print('developer name: ' + soup.find('li', class_='apptitle').h1.text)
+    print('developer id: ' + dev.split('/')[2])
+    print('developer global rank: ' + dev_info[0])
+    print('developer  IOS apps number: ' + dev_info[1])
 
 def main():
     dictionary_countries = get_country_dic()
