@@ -59,7 +59,6 @@ def get_data_by_id(id):
 
 def get_ranks_by_id(id):
     """
-
        :param id: an app id
        :return: data from 'daily ranks' tab for the app
        """
@@ -193,4 +192,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
