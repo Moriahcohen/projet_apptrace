@@ -114,7 +114,7 @@ def get_categories(id, dictionary_categories):
                 for key, value in dictionary_categories.items():
                     if cat.text == value:
                         insert_in_db([int(id), int(key)], query)
-                        logger.info('row inserted in dev_app table succesfully')
+                        logger.info('row inserted in category table succesfully')
     except Exception as e:
         logger.error(e)
 
