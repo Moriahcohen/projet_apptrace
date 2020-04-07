@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 from selenium.webdriver import Chrome
 import logging
+import pymysql
 
 # clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
 # Moriah Cohen Scali and Roni Chauvart
@@ -10,7 +11,6 @@ import logging
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='apptrace.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
 stream_handler = logging.StreamHandler()
-
 
 def get_date_apptrace():
     """
@@ -32,6 +32,39 @@ def get_soup(url):
     soup = BeautifulSoup(page, 'lxml')
     return soup
 
+def transform_to_digit_only(app_table):
+    """
+    :param app_table: some data of the app
+    :return: the data in require form for the db
+    """
+    app_table[0] = int(app_table[0].split('y')[0].rstrip())
+    app_table[1] = int(app_table[1].split('C')[0].rstrip())
+    app_table[6] = int(app_table[6].split('C')[0].rstrip())
+    app_table[5] = int(app_table[5][1:])
+    app_table[2] = int(app_table[2])
+    app_table[3] = int(''.join(app_table[3].split()))
+    return app_table
+
+def insert_in_db(list, query):
+    """
+    :param list: the list of value we want to insert in the current row
+    :param query: the sql query
+    The function perform insert according to the query and the list
+    """
+    try:
+        conn = pymysql.connect(host='localhost', user='root', passwd= sql_password, database='apptrace')
+        mycursor = conn.cursor()
+        if type(list) == list:
+            mycursor.execute(query, tuple(list))
+        else:
+            mycursor.execute(query, list)
+        conn.commit()
+        #print(mycursor.rowcount, "was inserted.")
+    except Exception as e:
+        print(e)
+    finally:
+        mycursor.close()
+        conn.close()
 
 def get_data_by_id(id):
     """
@@ -40,41 +73,48 @@ def get_data_by_id(id):
     :return: the data of every application according to the id
     """
     try:
+        app_table = []
         soup = get_soup('https://www.apptrace.com/app/' + str(id))
         app_detail = soup.find('div', class_='app_details')
-        url_dev = soup.find('li', class_='apptitle').h2.a.get('href')
-        get_dev_info(url_dev)
-
-        dic_app_details = {'Name app': soup.find('li', class_='apptitle').h1.text,
-                           'Developer': soup.find('li', class_='apptitle').h2.a.text,
-                           'Price': soup.find('li', class_='apptype appstore').text}
-        for detail in app_detail.find_all('div', class_='infobox'):
-            dic_app_details[detail.find('p', class_='title').text] = detail.find('p', class_='data').text
+        dev_id = soup.find('li', class_='apptitle').h2.a.get('href').split('/')[2]
+        get_dev_info(dev_id, id)
+        name = soup.find('li', class_='apptitle').h1.text
+        price = soup.find('li', class_='apptype appstore').text[1:]
+        for i,detail in enumerate(app_detail.find_all('div', class_='infobox')):
+            app_table.append(detail.find('p', class_='data').text)
+            if i==3:#average_rating
+                app_table.append(float(detail.find('p', class_='info').text.split('f')[1]))
+        app_table = transform_to_digit_only(app_table)
+        # a fixer
         row_rating = app_detail.find('div', class_='row rating')
-        dic_app_details['Rating'] = row_rating.find('strong', itemprop='ratingValue').text + "/5"
-        dic_app_details['Ratings Count'] = row_rating.find('span', itemprop='ratingCount').text
-        dic_app_details['Description'] = app_detail.find('div', class_='t1c active_language').text
-        dic_app_details['Number of versions'] = int(len(soup.find('div', class_='table versions opened').find_all('div', class_="cell"))/2)
-
-        logger.info('Data main tab ok')
-        return dic_app_details
+        current_rating = 0
+        curr_num_rating = 0
+        # try :
+        #     current_rating = row_rating.find('strong', itemprop='ratingValue').text
+        #     curr_num_rating = row_rating.find('span', itemprop='ratingCount').text.split('r')[0].rstrip()
+        # except Exception as e:
+        #     print(e)
+        description = app_detail.find('div', class_='t1c active_language').text
+        number_of_versions = int(len(soup.find('div', class_='table versions opened').find_all('div', class_="cell"))/2)
+        list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [number_of_versions, int(dev_id)]
+        return list_info
     except Exception as e:
         logger.error(e)
 
-
-def get_categories(id):
+def get_categories(id, dictionary_categories):
     """
     Get app categories
     :param id: url id of the app
     :return: dictionary with the app categories
     """
     try:
-        dict_cat = {}
+        query = "INSERT INTO app_category(app_id, category_id) VALUES (%s,%s)"
         for i, cat in enumerate(get_soup("https://www.apptrace.com/app/" + str(id) + "/ranks").find_all('a', class_='genre_selector')):
             if cat.text != 'Overall':
-                dict_cat['Category #' + str(i)] = cat.text
-        logger.info('Categories ok')
-        return dict_cat
+                for key, value in dictionary_categories.items():
+                    if cat.text == value:
+                        insert_in_db([int(id), int(key)], query)
+                        logger.info('row inserted in dev_app table succesfully')
     except Exception as e:
         logger.error(e)
 
@@ -84,44 +124,60 @@ def get_top_rankings(id, driver):
     Get app rankings in top 1/10/50/100/300
     :param id: url id of the app
     :param driver: usually Chrome
-    :return: dictionary of app rankings in top 1/10/50/100/300
+    return list_top_rankings: a list of number of countries where the app in in top 1, top 10, top 50, top 100 and top 300
     """
     try:
-        dict_top_rankings = {}
+        list_top_rankings = []
         rankings = driver.find_elements_by_class_name("infobox")
         for ranking in rankings:
-            ranking_title = ranking.find_element_by_class_name("title").text
             ranking_rank = ranking.find_element_by_class_name("data").text
-            dict_top_rankings[ranking_title] = "#" + ranking_rank
-        logger.info('Top rankings ok')
-        return dict_top_rankings
+            list_top_rankings.append(int(ranking_rank))
+        #logger.info('Top rankings ok')
+        return list_top_rankings
     except Exception as e:
         logger.error(e)
 
-
-def rankings_countries(id, driver, countries_type):
+def rankings_countries(id, driver, list_type, dictionary_country):
     """
     Get app countries rankings in top countries or rest of the world
     :param id: url id of the app
     :param driver: usually Chrome
-    :param countries_type : "top_countries" or "world"
-    :return: dictionary of app rankings in top countries or rest of the world
+    :param list_type: "top_countries" or "world"
+    :param dictionary_country: the dictionary of the countries
+    :return: app rankings in top countries or rest of the world
     """
-    dict_countries = {}
     try:
-        countries = driver.find_element_by_id("rankings_by_genre_" + countries_type).find_elements_by_class_name("cell")
-        for country in countries:
-            country_name = country.find_element_by_class_name("content").text
-            country_rank = country.find_element_by_class_name("rank").text
-            dict_countries[country_name + ' Ranking'] = "#" + country_rank
-        logger.info(countries_type + 'rankings ok')
-        return dict_countries
+        for type in list_type:
+            countries = driver.find_element_by_id("rankings_by_genre_" + type).find_elements_by_class_name("cell")
+            for country in countries:
+                country_name = country.find_element_by_class_name("content").text
+                country_rank = country.find_element_by_class_name("rank").text
+                query = "INSERT INTO app_country_rank (app_id, country_id, ranking) VALUES (%s,%s,%s)"
+                country_id = 0
+                for key in dictionary_country.keys():
+                    country_id = country_id + 1
+                    if key == country_name:
+                        insert_in_db([id, country_id, country_rank], query)
+            logger.info(type + 'rankings ok')
     except Exception:
-        logger.error("No ranking in " + countries_type)
+        logger.error("No ranking in " + type)
 
-
-# create a new set of id of application so we won't get any duplicates
-id_app_set = {1031002863}
+def data_exist(query, id):
+    """
+    check if a certain id already exist in a table
+    :param query: sql query
+    :param id: id of the row we want to check if already exist or not
+    """
+    conn = pymysql.connect(host='localhost', user='root', passwd= sql_password , database='apptrace')
+    mycursor = conn.cursor()
+    mycursor.execute(query, (id,))
+    data = "error"
+    for i in mycursor:
+        data = i
+    if data == "error":
+        return False
+    else:
+        return True
 
 
 def get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver):
@@ -130,26 +186,32 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
     :param dictionary_countries: the dictionary of key = country and value = code internet - data-link
     :param dictionary_categories: the dictionary of keys = data-link of every category ,  the values = categories name
     :param driver: usually Chrome
-    :return: data for all apps within countries of dictionary_countries and categories of dictionary_categories
+    insert data for all apps within countries of dictionary_countries and categories of dictionary_categories
     """
     paid_or_free = ['free', 'paid']
     for cost in paid_or_free:
         for key in dictionary_categories.keys():
             for country in dictionary_countries.keys():
                 try:
-                    soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + '/top' + cost + 'applications/' + str(key) + '/2020-3-9')
+                    soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + '/top' + cost + 'applications/' + str(key) + '/2020-3-15')
                     for tag in soup.find_all('div', class_ ='cell linked app_cell'):
                         id_tag = int(tag.find('div', class_='id').get('id'))
-                        if id_tag not in id_app_set:
-                            id_app_set.add(id_tag)
-                            logger.info("Scrapped in: " + country + "/" + dictionary_categories[key]+ "/" + cost)
-                            get_data_by_id(id_tag)
-                            get_categories(id_tag)
-                            driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
-                            get_top_rankings(id_tag, driver)
-                            rankings_countries(id_tag, driver, 'top_countries')
-                            rankings_countries(id_tag, driver, 'world')
-                            logger.info("Apps scrapped: {}".format(len(id_app_set)))
+                        logger.info("Scrapped in: " + country + "/" + dictionary_categories[key] + "/" + cost)
+                        driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
+                        if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
+                            query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                            insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
+                            #logger.info(get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
+                            logger.info('row inserted in app table')
+                            #a supprimer
+                            print(str(get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
+                            get_categories(id_tag, dictionary_categories)
+                            rankings_countries(id_tag, driver, ['top_countries','world'],dictionary_countries)
+                            #logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
+                            logger.info('row inserted in app_country_rank table')
+                        else:
+                            #print('app exist already')
+                            logger.info('app exist already')
                 except Exception as e:
                        logging.info(e)
 
@@ -161,8 +223,18 @@ def get_country_dic():
     """
     country_chart_page = get_soup('https://www.apptrace.com/charts').find('ul', class_='countryselect')
     dict_country = {}
-    for country in country_chart_page.find_all('li', class_='visible'):
+    list_country = []
+    sample_id = 1
+    query = "INSERT INTO country(id, country) VALUES (%s,%s)"
+    for country in country_chart_page.find_all('li', class_='invisible'):
         dict_country[country.text] = country.a.get('data-link')
+        list_country.append(country.text)
+        if not data_exist("SELECT * FROM country WHERE id=%s", sample_id):
+            insert_in_db([sample_id, country.text], query)
+            logger.info('row inserted in country')
+            sample_id= sample_id +1
+        else:
+            logger.info('country already in db')
     return dict_country
 
 
@@ -183,34 +255,47 @@ def get_category_dic():
     return dic_category
 
 
-def get_dev_info(dev):
+def get_dev_info(dev_id, app_id):
     """
     Get information about a developer
-    :param dev: dev id used in url
+    :param dev_id: dev id used in url
     :return: developer's info
     """
     try:
-        soup = get_soup('https://www.apptrace.com' + dev)
-        dev_info = []
+        soup = get_soup('https://www.apptrace.com/developer/' + dev_id)
+        dev_table = []
+        dev_table.append(int(dev_id))
+        dev_table.append(soup.find('li', class_='apptitle').h1.text)
         for tag in soup.find('div', class_='app-database devs'):
             for i in soup.find_all('li', class_='apptype'):
-                dev_info.append(i.span.text)
-        # print('developer name: ' + soup.find('li', class_='apptitle').h1.text)
-        # print('developer id: ' + dev.split('/')[2])
-        # print('developer global rank: ' + dev_info[0])
-        # print('developer  IOS apps number: ' + dev_info[1])
+                dev_table.append(int(i.span.text))
+        if not data_exist("SELECT * FROM dev WHERE id=%s", dev_id):
+            insert_in_db(dev_table[:4],"INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
+            logger.info(str(dev_table[1]) + ' row inserted in dev table ')
+        else:
+            #print('dev exist already')
+            logger.info('Dev exist already')
         logger.info('Dev info ok')
     except Exception as e:
         logger.error(e)
 
 
 def main():
-    driver = Chrome()
+    global sql_password
+    sql_password = input('please insert your sqlpassword ?' + '\n')
+    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
+    # insert into the table 'category' the id and the name of the categories
+    query = "INSERT INTO category(id, category) VALUES (%s,%s)"
+    for key, value in dictionary_categories.items():
+        if not data_exist("SELECT * FROM category WHERE id=%s", key):
+            insert_in_db([key, value], query)
+    logger.info('all the categories inserted in category successfuly')
+
+    #start scrapping and inserting every app, dev, ranking data in our database
     get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver)
     driver.close()
-
 
 if __name__ == "__main__":
     main()
