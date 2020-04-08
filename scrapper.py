@@ -179,6 +179,23 @@ def data_exist(query, id):
     else:
         return True
 
+def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver):
+    try:
+        if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
+            query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+            insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
+            # print a supprimer
+            print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
+            logger.info('row inserted in app table')
+            get_categories(id_tag, dictionary_categories)
+            rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
+            # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
+            logger.info('row inserted in app_country_rank table')
+        else:
+            logger.info('app exist already')
+    except Exception as e:
+        logger.info(e)
+
 
 def get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver):
     """
@@ -198,21 +215,7 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
                         id_tag = int(tag.find('div', class_='id').get('id'))
                         logger.info("Scrapped in: " + country + "/" + dictionary_categories[key] + "/" + cost)
                         driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
-                        try:
-                            if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
-                                query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
-                                insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
-                                #print a supprimer
-                                print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-                                logger.info('row inserted in app table')
-                                get_categories(id_tag, dictionary_categories)
-                                rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
-                                # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
-                                logger.info('row inserted in app_country_rank table')
-                            else:
-                                logger.info('app exist already')
-                        except Exception as e:
-                            logger.info(e)
+                        insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
                 except Exception as e:
                        logging.info(e)
 
