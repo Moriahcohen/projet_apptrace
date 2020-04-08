@@ -190,28 +190,29 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
     """
     paid_or_free = ['free', 'paid']
     for cost in paid_or_free:
-        for key in dictionary_categories.keys():
-            for country in dictionary_countries.keys():
+        for country in dictionary_countries.keys():
+            for key in dictionary_categories.keys():
                 try:
                     soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + '/top' + cost + 'applications/' + str(key) + '/2020-3-15')
                     for tag in soup.find_all('div', class_ ='cell linked app_cell'):
                         id_tag = int(tag.find('div', class_='id').get('id'))
                         logger.info("Scrapped in: " + country + "/" + dictionary_categories[key] + "/" + cost)
                         driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
-                        if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
-                            query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
-                            insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
-                            #logger.info(get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-                            logger.info('row inserted in app table')
-                            #a supprimer
-                            print(str(get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-                            get_categories(id_tag, dictionary_categories)
-                            rankings_countries(id_tag, driver, ['top_countries','world'],dictionary_countries)
-                            #logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
-                            logger.info('row inserted in app_country_rank table')
-                        else:
-                            #print('app exist already')
-                            logger.info('app exist already')
+                        try:
+                            if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
+                                query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+                                insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
+                                #print a supprimer
+                                print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
+                                logger.info('row inserted in app table')
+                                get_categories(id_tag, dictionary_categories)
+                                rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
+                                # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
+                                logger.info('row inserted in app_country_rank table')
+                            else:
+                                logger.info('app exist already')
+                        except Exception as e:
+                            logger.info(e)
                 except Exception as e:
                        logging.info(e)
 
@@ -271,7 +272,10 @@ def get_dev_info(dev_id, app_id):
                 dev_table.append(int(i.span.text))
         if not data_exist("SELECT * FROM dev WHERE id=%s", dev_id):
             insert_in_db(dev_table[:4],"INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
-            logger.info(str(dev_table[1]) + ' row inserted in dev table ')
+            try:
+                logger.info('row inserted in dev table')
+            except Exception as e:
+                print(e)
         else:
             #print('dev exist already')
             logger.info('Dev exist already')

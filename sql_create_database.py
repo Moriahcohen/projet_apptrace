@@ -10,7 +10,7 @@ def create_database(sql_password, database_name):
     mycursor.execute("DROP DATABASE apptrace")
     mycursor.execute("CREATE DATABASE apptrace")
 
-    conn = pymysql.connect(host='localhost', user='root', passwd='chocolat7', database=database_name)
+    conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database=database_name)
     mycursor = conn.cursor()
 
     #dev table
