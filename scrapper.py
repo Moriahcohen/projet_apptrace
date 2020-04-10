@@ -68,7 +68,7 @@ def insert_in_db(list_, query):
         conn.commit()
         # print(mycursor.rowcount, "was inserted.")
     except Exception as e:
-        print(e)
+        logger.info(e)
     finally:
         mycursor.close()
         conn.close()
@@ -81,7 +81,8 @@ def get_price(soup):
     """
     try:
         return soup.find('li', class_='apptype appstore').text[1:]
-    except:
+    except Exception as e:
+        logger.info(e)
         return -1
 
 def get_name(soup):
@@ -91,7 +92,8 @@ def get_name(soup):
     """
     try:
         return soup.find('li', class_='apptitle').h1.text
-    except:
+    except Exception as e:
+        logger.info(e)
         return 'nan'
 
 def get_number_of_versions(soup):
@@ -102,8 +104,7 @@ def get_number_of_versions(soup):
     try:
         return int(len(soup.find('div', class_='table versions opened').find_all('div', class_="cell")) / 2)
     except Exception as e:
-        print('hey')
-        print(e)
+        logger.info(e)
         return -1
 
 def get_current_rating(soup):
@@ -116,7 +117,7 @@ def get_current_rating(soup):
         row_rating = app_detail.find('div', class_='row rating')
         current_rating = row_rating.find('strong', itemprop='ratingValue').text
     except Exception as e:
-        print(e)
+        logger.info(e)
         current_rating = -1
     finally:
         return current_rating
@@ -129,7 +130,7 @@ def get_curr_num_rating(soup):
     try:
         app_detail = soup.find('div', class_='app_details')
         row_rating = app_detail.find('div', class_='row rating')
-        curr_num_rating = row_rating.find('span', itemprop='ratingCount').text.split('r')[0].rstrip()
+        curr_num_rating = ''.join(row_rating.find('span', itemprop='ratingCount').text.split(' ')[:-1])
     except Exception as e:
         curr_num_rating = -1
     finally:
@@ -150,7 +151,7 @@ def get_app_table(soup):
                 app_table.append(float(detail.find('p', class_='info').text.split('f')[1]))
         return transform_to_digit_only(app_table)
     except Exception as e:
-        print(e)
+        logger.info(e)
 
 def get_data_by_id(id):
     """
@@ -167,10 +168,7 @@ def get_data_by_id(id):
         price = get_price(soup)
         app_table = get_app_table(soup)
         current_rating = get_current_rating(soup)
-
-        # probleme pr ca (essaye de faire avec la fonction get_curr_num_rating ca marche pas)
-        curr_num_rating = -1
-
+        curr_num_rating = get_curr_num_rating(soup)
         description = app_detail.find('div', class_='t1c active_language').text
         number_of_versions = get_number_of_versions(soup)
         list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [
@@ -195,7 +193,7 @@ def get_categories(id, dictionary_categories):
                 for key, value in dictionary_categories.items():
                     if cat.text == value:
                         insert_in_db([int(id), int(key)], query)
-                        logger.info(str(value) + ' inserted in category table successfully')
+                        logger.info(str(id) + '-' + str(value) + ':' + str(key) + ' inserted in app_category table successfully')
     except Exception as e:
         logger.error(e)
 
@@ -267,17 +265,13 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
     try:
         if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
             query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
-            insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
+            list_info = get_data_by_id(id_tag)
+            insert_in_db(list_info + get_top_rankings(id_tag, driver), query)
             # print a supprimer
-            print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-            #logger.info(str(get_data_by_id(id_tag)[1]) + 'row inserted in app table')
+            print((list_info[1]) + ' : row inserted in app table')
             get_categories(id_tag, dictionary_categories)
             rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
-            # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
-            try:
-                logger.info('row inserted in app_country_rank table \n')
-            except Exception as e:
-                print(e)
+            logger.info('row inserted in app_country_rank table \n')
         else:
             logger.info('app already in database')
     except Exception as e:
