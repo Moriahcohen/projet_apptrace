@@ -5,7 +5,6 @@ from selenium.webdriver import Chrome
 import logging
 import argparse
 import pymysql
-import test_hello
 
 # clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
 # Moriah Cohen Scali and Roni Chauvart
@@ -200,11 +199,14 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
             insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
             # print a supprimer
             print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-            logger.info(str(get_data_by_id(id_tag)[1]) + 'row inserted in app table')
+            #logger.info(str(get_data_by_id(id_tag)[1]) + 'row inserted in app table')
             get_categories(id_tag, dictionary_categories)
             rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
             # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
-            logger.info('row inserted in app_country_rank table \n')
+            try:
+                logger.info('row inserted in app_country_rank table \n')
+            except Exception as e:
+                print(e)
         else:
             logger.info('app already in database')
     except Exception as e:
@@ -281,19 +283,18 @@ def get_dev_info(dev_id, app_id):
     :return: developer's info
     """
     try:
-        soup = get_soup('https://www.apptrace.com/developer/' + dev_id)
-        dev_table = [int(dev_id), soup.find('li', class_='apptitle').h1.text]
-        for tag in soup.find('div', class_='app-database devs'):
-            for i in soup.find_all('li', class_='apptype'):
-                dev_table.append(int(i.span.text))
         if not data_exist("SELECT * FROM dev WHERE id=%s", dev_id):
-            insert_in_db(dev_table[:4], "INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
-            try:
-                logger.info(str(soup.find('li', class_='apptitle').h1.text) + ' row inserted in dev table')
-            except Exception as e:
-                print(e)
+            soup = get_soup('https://www.apptrace.com/developer/' + dev_id)
+            dev_table = [int(dev_id), soup.find('li', class_='apptitle').h1.text]
+            for tag in soup.find('div', class_='app-database devs'):
+                for i in soup.find_all('li', class_='apptype'):
+                    dev_table.append(int(i.span.text))
+                insert_in_db(dev_table[:4], "INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
+                try:
+                    logger.info(str(soup.find('li', class_='apptitle').h1.text) + ' row inserted in dev table')
+                except Exception as e:
+                    print(e)
         else:
-            # print('dev exist already')
             logger.info('Dev exist already')
         logger.info('Dev info ok')
     except Exception as e:
@@ -358,7 +359,7 @@ args = parser_scrap.parse_args()
 def main():
     global sql_password
     sql_password = input('please insert your sqlpassword ?' + '\n')
-    driver = Chrome()
+    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     # dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
     # insert into the table 'category' the id and the name of the categories
