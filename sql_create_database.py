@@ -7,7 +7,7 @@ def connect_sql(sql_password):
 
 def create_database(sql_password, database_name):
     mycursor = connect_sql(sql_password)
-    mycursor.execute("DROP DATABASE apptrace")
+    mycursor.execute("DROP DATABASE IF EXISTS apptrace")
     mycursor.execute("CREATE DATABASE apptrace")
 
     conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database=database_name)
@@ -71,11 +71,11 @@ def create_database(sql_password, database_name):
     # mycursor.execute("SHOW COLUMNS FROM app")
     # for db in mycursor:
     #     print(db)
-    
+
+
 def main():
     sql_password = input('please insert your sqlpassword ?' + '\n')
     create_database(sql_password,'apptrace')
-
 
 
 if __name__ == "__main__":

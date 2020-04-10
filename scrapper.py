@@ -3,14 +3,17 @@ from bs4 import BeautifulSoup
 import datetime
 from selenium.webdriver import Chrome
 import logging
+import argparse
 import pymysql
+import test_hello
 
 # clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
 # Moriah Cohen Scali and Roni Chauvart
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(filename='apptrace.log', level=logging.DEBUG, format='%(asctime)s %(message)s')
+logging.basicConfig(filename='apptrace.log', level=logging.INFO, format='%(asctime)s %(message)s')
 stream_handler = logging.StreamHandler()
+
 
 def get_date_apptrace():
     """
@@ -32,6 +35,7 @@ def get_soup(url):
     soup = BeautifulSoup(page, 'lxml')
     return soup
 
+
 def transform_to_digit_only(app_table):
     """
     :param app_table: some data of the app
@@ -45,26 +49,28 @@ def transform_to_digit_only(app_table):
     app_table[3] = int(''.join(app_table[3].split()))
     return app_table
 
-def insert_in_db(list, query):
+
+def insert_in_db(list_, query):
     """
-    :param list: the list of value we want to insert in the current row
+    :param list_: the list of value we want to insert in the current row
     :param query: the sql query
     The function perform insert according to the query and the list
     """
     try:
-        conn = pymysql.connect(host='localhost', user='root', passwd= sql_password, database='apptrace')
+        conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database='apptrace')
         mycursor = conn.cursor()
-        if type(list) == list:
-            mycursor.execute(query, tuple(list))
+        if type(list_) == list:
+            mycursor.execute(query, tuple(list_))
         else:
-            mycursor.execute(query, list)
+            mycursor.execute(query, list_)
         conn.commit()
-        #print(mycursor.rowcount, "was inserted.")
+        # print(mycursor.rowcount, "was inserted.")
     except Exception as e:
         print(e)
     finally:
         mycursor.close()
         conn.close()
+
 
 def get_data_by_id(id):
     """
@@ -80,9 +86,9 @@ def get_data_by_id(id):
         get_dev_info(dev_id, id)
         name = soup.find('li', class_='apptitle').h1.text
         price = soup.find('li', class_='apptype appstore').text[1:]
-        for i,detail in enumerate(app_detail.find_all('div', class_='infobox')):
+        for i, detail in enumerate(app_detail.find_all('div', class_='infobox')):
             app_table.append(detail.find('p', class_='data').text)
-            if i==3:#average_rating
+            if i == 3:  # average_rating
                 app_table.append(float(detail.find('p', class_='info').text.split('f')[1]))
         app_table = transform_to_digit_only(app_table)
         # a fixer
@@ -95,11 +101,15 @@ def get_data_by_id(id):
         # except Exception as e:
         #     print(e)
         description = app_detail.find('div', class_='t1c active_language').text
-        number_of_versions = int(len(soup.find('div', class_='table versions opened').find_all('div', class_="cell"))/2)
-        list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [number_of_versions, int(dev_id)]
+        number_of_versions = int(
+            len(soup.find('div', class_='table versions opened').find_all('div', class_="cell")) / 2)
+        list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [
+            number_of_versions, int(dev_id)]
+        logger.info('Data from main tab ok')
         return list_info
     except Exception as e:
         logger.error(e)
+
 
 def get_categories(id, dictionary_categories):
     """
@@ -109,12 +119,13 @@ def get_categories(id, dictionary_categories):
     """
     try:
         query = "INSERT INTO app_category(app_id, category_id) VALUES (%s,%s)"
-        for i, cat in enumerate(get_soup("https://www.apptrace.com/app/" + str(id) + "/ranks").find_all('a', class_='genre_selector')):
+        for i, cat in enumerate(
+                get_soup("https://www.apptrace.com/app/" + str(id) + "/ranks").find_all('a', class_='genre_selector')):
             if cat.text != 'Overall':
                 for key, value in dictionary_categories.items():
                     if cat.text == value:
                         insert_in_db([int(id), int(key)], query)
-                        logger.info('row inserted in category table succesfully')
+                        logger.info(str(value) + ' inserted in category table successfully')
     except Exception as e:
         logger.error(e)
 
@@ -132,10 +143,11 @@ def get_top_rankings(id, driver):
         for ranking in rankings:
             ranking_rank = ranking.find_element_by_class_name("data").text
             list_top_rankings.append(int(ranking_rank))
-        #logger.info('Top rankings ok')
+        logger.info('Top rankings ok')
         return list_top_rankings
     except Exception as e:
         logger.error(e)
+
 
 def rankings_countries(id, driver, list_type, dictionary_country):
     """
@@ -146,9 +158,9 @@ def rankings_countries(id, driver, list_type, dictionary_country):
     :param dictionary_country: the dictionary of the countries
     :return: app rankings in top countries or rest of the world
     """
-    try:
-        for type in list_type:
-            countries = driver.find_element_by_id("rankings_by_genre_" + type).find_elements_by_class_name("cell")
+    for type_ in list_type:
+        try:
+            countries = driver.find_element_by_id("rankings_by_genre_" + type_).find_elements_by_class_name("cell")
             for country in countries:
                 country_name = country.find_element_by_class_name("content").text
                 country_rank = country.find_element_by_class_name("rank").text
@@ -158,9 +170,10 @@ def rankings_countries(id, driver, list_type, dictionary_country):
                     country_id = country_id + 1
                     if key == country_name:
                         insert_in_db([id, country_id, country_rank], query)
-            logger.info(type + 'rankings ok')
-    except Exception:
-        logger.error("No ranking in " + type)
+            logger.info(type_ + 'rankings ok')
+        except Exception:
+            logger.error("No ranking in " + type_)
+
 
 def data_exist(query, id):
     """
@@ -168,7 +181,7 @@ def data_exist(query, id):
     :param query: sql query
     :param id: id of the row we want to check if already exist or not
     """
-    conn = pymysql.connect(host='localhost', user='root', passwd= sql_password , database='apptrace')
+    conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database='apptrace')
     mycursor = conn.cursor()
     mycursor.execute(query, (id,))
     data = "error"
@@ -179,6 +192,7 @@ def data_exist(query, id):
     else:
         return True
 
+
 def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver):
     try:
         if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
@@ -186,13 +200,13 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
             insert_in_db(get_data_by_id(id_tag) + get_top_rankings(id_tag, driver), query)
             # print a supprimer
             print((get_data_by_id(id_tag)[1]) + ' : row inserted in app table')
-            logger.info('row inserted in app table')
+            logger.info(str(get_data_by_id(id_tag)[1]) + 'row inserted in app table')
             get_categories(id_tag, dictionary_categories)
             rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
             # logger.info(get_data_by_id(id_tag)[1]) + ' row inserted in app_country_rank table')
-            logger.info('row inserted in app_country_rank table')
+            logger.info('row inserted in app_country_rank table \n')
         else:
-            logger.info('app exist already')
+            logger.info('app already in database')
     except Exception as e:
         logger.info(e)
 
@@ -210,14 +224,15 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
         for country in dictionary_countries.keys():
             for key in dictionary_categories.keys():
                 try:
-                    soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + '/top' + cost + 'applications/' + str(key) + '/2020-3-15')
-                    for tag in soup.find_all('div', class_ ='cell linked app_cell'):
+                    soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + \
+                                    '/top' + cost + 'applications/' + str(key) + '/2020-3-15')
+                    for tag in soup.find_all('div', class_='cell linked app_cell'):
                         id_tag = int(tag.find('div', class_='id').get('id'))
-                        logger.info("Scrapped in: " + country + "/" + dictionary_categories[key] + "/" + cost)
+                        logger.info("Scrapping in: " + country + "/" + dictionary_categories[key] + "/" + cost)
                         driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
                         insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
                 except Exception as e:
-                       logging.info(e)
+                    logging.info(e)
 
 
 def get_country_dic():
@@ -235,10 +250,10 @@ def get_country_dic():
         list_country.append(country.text)
         if not data_exist("SELECT * FROM country WHERE id=%s", sample_id):
             insert_in_db([sample_id, country.text], query)
-            logger.info('row inserted in country')
-            sample_id= sample_id +1
+            logger.info(str(country.text) + ' row inserted in country')
+            sample_id = sample_id + 1
         else:
-            logger.info('country already in db')
+            logger.info(str(country.text) + ': country already in db')
     return dict_country
 
 
@@ -267,31 +282,84 @@ def get_dev_info(dev_id, app_id):
     """
     try:
         soup = get_soup('https://www.apptrace.com/developer/' + dev_id)
-        dev_table = []
-        dev_table.append(int(dev_id))
-        dev_table.append(soup.find('li', class_='apptitle').h1.text)
+        dev_table = [int(dev_id), soup.find('li', class_='apptitle').h1.text]
         for tag in soup.find('div', class_='app-database devs'):
             for i in soup.find_all('li', class_='apptype'):
                 dev_table.append(int(i.span.text))
         if not data_exist("SELECT * FROM dev WHERE id=%s", dev_id):
-            insert_in_db(dev_table[:4],"INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
+            insert_in_db(dev_table[:4], "INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
             try:
-                logger.info('row inserted in dev table')
+                logger.info(str(soup.find('li', class_='apptitle').h1.text) + ' row inserted in dev table')
             except Exception as e:
                 print(e)
         else:
-            #print('dev exist already')
+            # print('dev exist already')
             logger.info('Dev exist already')
         logger.info('Dev info ok')
     except Exception as e:
         logger.error(e)
 
 
+def info_by_id(driver, id_):
+    """
+    Get info for single/multiples specific app(s)
+    :param driver: usually Chrome
+    :param id_: an app id, or a list of ids
+    :return: info for the app/apps
+    """
+    try:
+        ids = [id_] if isinstance(id_, int) else id_
+        for i, id_tag in enumerate(ids):
+            get_data_by_id(id_tag)
+            driver.get("https://www.apptrace.com/app/" + str(id_tag) + "/ranks")
+            get_top_rankings(driver)
+            rankings_countries(driver, 'top_countries')
+            rankings_countries(driver, 'world')
+            logger.info("{} apps scrapped \n".format(i + 1))
+    except Exception as e:
+        logger.info(e)
+
+
+def by_country(countries, cat, driver):
+    """
+    Get app info for single/multiple specific countries and categories
+    :param countries: a country as a string or multiple countries in a list
+    :param cat: a category as a string or multiple categories in a list
+    :param driver: usually Chrome
+    :return: App info for the specified countries and categories
+    """
+    try:
+        list_countries = [countries] if isinstance(countries, str) else countries
+        list_cat = [cat] if isinstance(cat, str) else cat
+        all_cat_reverse = {value: key for key, value in get_category_dic().items()}
+        dict_countries, dict_cat_reverse = {}, {}
+        for country in list_countries:
+            dict_countries[country] = get_country_dic()[country]
+        for cat in list_cat:
+            dict_cat_reverse[cat] = all_cat_reverse[cat]
+        dict_cat = {value: key for key, value in dict_cat_reverse.items()}
+        get_app_id_by_category_by_country(dict_countries, dict_cat, driver)
+    except Exception as e:
+        logger.info(e)
+
+
+# Defining parser
+parser_scrap = argparse.ArgumentParser(description='Scrap app info')
+parser_scrap.add_argument('-c', '--country', nargs='+', metavar='', type=str,
+                          help='If you want to scrap apps from specific countries. Must be a string or strings')
+parser_scrap.add_argument('-k', '--category', nargs='+', metavar='', type=str,
+                          help='If you want to scrap apps from specific categories. Must be a string or strings')
+parser_scrap.add_argument('-i', '--id', nargs='+', metavar='', type=int,
+                          help='If you want to scrap apps with specific ids. Must be an integer or integers')
+
+args = parser_scrap.parse_args()
+
+
 def main():
     global sql_password
     sql_password = input('please insert your sqlpassword ?' + '\n')
-    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
-    dictionary_countries = get_country_dic()
+    driver = Chrome()
+    # dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
     # insert into the table 'category' the id and the name of the categories
     query = "INSERT INTO category(id, category) VALUES (%s,%s)"
@@ -300,10 +368,20 @@ def main():
             insert_in_db([key, value], query)
     logger.info('all the categories inserted in category successfuly')
 
-    #start scrapping and inserting every app, dev, ranking data in our database
-    get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver)
+    # start scrapping and inserting every app, dev, ranking data in our database
+    if args.country and args.category:
+        by_country(args.country, args.category, driver)
+    elif args.country and not args.category:
+        by_country(args.country, get_category_dic(), driver)
+    elif not args.country and args.category:
+        by_country(get_country_dic(), args.category, driver)
+    elif args.id:
+        info_by_id(driver, args.id)
+    else:
+        get_app_id_by_category_by_country(get_country_dic(), get_category_dic(), driver)
+    # get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver)
     driver.close()
+
 
 if __name__ == "__main__":
     main()
-
