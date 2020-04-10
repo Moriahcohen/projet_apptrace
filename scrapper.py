@@ -40,7 +40,10 @@ def transform_to_digit_only(app_table):
     :param app_table: some data of the app
     :return: the data in require form for the db
     """
-    app_table[0] = int(app_table[0].split('y')[0].rstrip())
+    if  'y' in app_table[0]:
+        app_table[0] = int(app_table[0].split('y')[0].rstrip())
+    else:
+        app_table[0] = round(int(app_table[0].split('m')[0].rstrip())/12, 2)
     app_table[1] = int(app_table[1].split('C')[0].rstrip())
     app_table[6] = int(app_table[6].split('C')[0].rstrip())
     app_table[5] = int(app_table[5][1:])
@@ -71,6 +74,84 @@ def insert_in_db(list_, query):
         conn.close()
 
 
+def get_price(soup):
+    """
+    :param soup: soup of the app url
+    :return: the price of the app
+    """
+    try:
+        return soup.find('li', class_='apptype appstore').text[1:]
+    except:
+        return -1
+
+def get_name(soup):
+    """
+    :param soup: soup of the app url
+    :return: the name of the app
+    """
+    try:
+        return soup.find('li', class_='apptitle').h1.text
+    except:
+        return 'nan'
+
+def get_number_of_versions(soup):
+    """
+    :param soup: soup of the app url
+    :return: the number of version of the app
+    """
+    try:
+        return int(len(soup.find('div', class_='table versions opened').find_all('div', class_="cell")) / 2)
+    except Exception as e:
+        print('hey')
+        print(e)
+        return -1
+
+def get_current_rating(soup):
+    """
+    :param soup: soup of the app url
+    :return: current rating of the app
+    """
+    try:
+        app_detail = soup.find('div', class_='app_details')
+        row_rating = app_detail.find('div', class_='row rating')
+        current_rating = row_rating.find('strong', itemprop='ratingValue').text
+    except Exception as e:
+        print(e)
+        current_rating = -1
+    finally:
+        return current_rating
+
+def get_curr_num_rating(soup):
+    """
+    :param soup: soup of the app url
+    :return: the current number of ratings of the app
+    """
+    try:
+        app_detail = soup.find('div', class_='app_details')
+        row_rating = app_detail.find('div', class_='row rating')
+        curr_num_rating = row_rating.find('span', itemprop='ratingCount').text.split('r')[0].rstrip()
+    except Exception as e:
+        curr_num_rating = -1
+    finally:
+        return curr_num_rating
+
+
+def get_app_table(soup):
+    """
+    :param soup: soup of the app url
+    :return: the app_table of the app
+    """
+    try:
+        app_detail = soup.find('div', class_='app_details')
+        app_table = []
+        for i, detail in enumerate(app_detail.find_all('div', class_='infobox')):
+            app_table.append(detail.find('p', class_='data').text)
+            if i == 3:  # average_rating
+                app_table.append(float(detail.find('p', class_='info').text.split('f')[1]))
+        return transform_to_digit_only(app_table)
+    except Exception as e:
+        print(e)
+
 def get_data_by_id(id):
     """
     Build a dictionary with app data found on the main tab
@@ -78,30 +159,20 @@ def get_data_by_id(id):
     :return: the data of every application according to the id
     """
     try:
-        app_table = []
         soup = get_soup('https://www.apptrace.com/app/' + str(id))
         app_detail = soup.find('div', class_='app_details')
         dev_id = soup.find('li', class_='apptitle').h2.a.get('href').split('/')[2]
         get_dev_info(dev_id, id)
-        name = soup.find('li', class_='apptitle').h1.text
-        price = soup.find('li', class_='apptype appstore').text[1:]
-        for i, detail in enumerate(app_detail.find_all('div', class_='infobox')):
-            app_table.append(detail.find('p', class_='data').text)
-            if i == 3:  # average_rating
-                app_table.append(float(detail.find('p', class_='info').text.split('f')[1]))
-        app_table = transform_to_digit_only(app_table)
-        # a fixer
-        row_rating = app_detail.find('div', class_='row rating')
-        current_rating = 0
-        curr_num_rating = 0
-        # try :
-        #     current_rating = row_rating.find('strong', itemprop='ratingValue').text
-        #     curr_num_rating = row_rating.find('span', itemprop='ratingCount').text.split('r')[0].rstrip()
-        # except Exception as e:
-        #     print(e)
+        name = get_name(soup)
+        price = get_price(soup)
+        app_table = get_app_table(soup)
+        current_rating = get_current_rating(soup)
+
+        # probleme pr ca (essaye de faire avec la fonction get_curr_num_rating ca marche pas)
+        curr_num_rating = -1
+
         description = app_detail.find('div', class_='t1c active_language').text
-        number_of_versions = int(
-            len(soup.find('div', class_='table versions opened').find_all('div', class_="cell")) / 2)
+        number_of_versions = get_number_of_versions(soup)
         list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [
             number_of_versions, int(dev_id)]
         logger.info('Data from main tab ok')
@@ -222,9 +293,9 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
     insert data for all apps within countries of dictionary_countries and categories of dictionary_categories
     """
     paid_or_free = ['free', 'paid']
-    for cost in paid_or_free:
-        for country in dictionary_countries.keys():
-            for key in dictionary_categories.keys():
+    for country in dictionary_countries.keys():
+        for key in dictionary_categories.keys():
+            for cost in paid_or_free:
                 try:
                     soup = get_soup('https://www.apptrace.com/Itunes/charts/' + dictionary_countries[country] + \
                                     '/top' + cost + 'applications/' + str(key) + '/2020-3-15')

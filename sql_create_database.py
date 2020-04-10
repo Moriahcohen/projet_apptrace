@@ -26,7 +26,7 @@ def create_database(sql_password, database_name):
                      "price DOUBLE, "
                      "curr_rating DOUBLE, "
                      "curr_num_ratings INT, "
-                     "age INT,"
+                     "age DOUBLE,"
                      "available_in INT,"
                      "activity INT,"
                      "overall_num_ratings INT, "
