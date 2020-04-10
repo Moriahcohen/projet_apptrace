@@ -173,7 +173,7 @@ def get_data_by_id(id):
         number_of_versions = get_number_of_versions(soup)
         list_info = [int(id), name, float(price), float(current_rating), int(curr_num_rating)] + app_table + [
             number_of_versions, int(dev_id)]
-        logger.info('Data from main tab ok')
+        logger.info(str(id) + ': Data from main tab ok')
         return list_info
     except Exception as e:
         logger.error(e)
@@ -238,7 +238,7 @@ def rankings_countries(id, driver, list_type, dictionary_country):
                     country_id = country_id + 1
                     if key == country_name:
                         insert_in_db([id, country_id, country_rank], query)
-            logger.info(type_ + 'rankings ok')
+            logger.info(str(id) + ':' + type_ + 'rankings ok')
         except Exception:
             logger.error("No ranking in " + type_)
 
@@ -271,7 +271,7 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
             print((list_info[1]) + ' : row inserted in app table')
             get_categories(id_tag, dictionary_categories)
             rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
-            logger.info('row inserted in app_country_rank table \n')
+            logger.info(str(id_tag) + ': row inserted in app_country_rank table \n')
         else:
             logger.info('app already in database')
     except Exception as e:
@@ -356,7 +356,7 @@ def get_dev_info(dev_id, app_id):
                     dev_table.append(int(i.span.text))
                 insert_in_db(dev_table[:4], "INSERT INTO dev(id, name, ranking, ios_app_num) VALUES (%s, %s, %s, %s) ")
                 try:
-                    logger.info(str(soup.find('li', class_='apptitle').h1.text) + ' row inserted in dev table')
+                    logger.info(str(dev_id)  + ' row inserted in dev table')
                 except Exception as e:
                     print(e)
         else:
