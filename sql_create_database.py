@@ -76,6 +76,7 @@ def create_database(sql_password, database_name):
 def main():
     sql_password = input('please insert your sqlpassword ?' + '\n')
     create_database(sql_password,'apptrace')
+    return sql_password
 
 
 if __name__ == "__main__":
