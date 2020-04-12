@@ -39,6 +39,7 @@ def get_soup(url):
 
 def transform_to_digit_only(app_table):
     """
+    a function to mmodify the app table element in ordor to fit our data
     :param app_table: some data of the app
     :return: the data in require form for the db
     """
@@ -66,9 +67,9 @@ def transform_to_digit_only(app_table):
 
 def insert_in_db(list_, query):
     """
+    The function perform insertion to the apptrace database according to the query and the list to insert
     :param list_: the list of value we want to insert in the current row
     :param query: the sql query
-    The function perform insert according to the query and the list
     """
     try:
         conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database='apptrace')
@@ -88,6 +89,7 @@ def insert_in_db(list_, query):
 
 def get_price(soup):
     """
+    the function scrap and return the price of the app
     :param soup: soup of the app url
     :return: the price of the app
     """
@@ -100,6 +102,7 @@ def get_price(soup):
 
 def get_name(soup):
     """
+    the function scrap and return the name of the app
     :param soup: soup of the app url
     :return: the name of the app
     """
@@ -112,6 +115,7 @@ def get_name(soup):
 
 def get_number_of_versions(soup):
     """
+    the function scrap and return the number of versions of the app
     :param soup: soup of the app url
     :return: the number of version of the app
     """
@@ -124,6 +128,7 @@ def get_number_of_versions(soup):
 
 def get_current_rating(soup):
     """
+    the function scrap and return the rating of the current version of the app
     :param soup: soup of the app url
     :return: current rating of the app
     """
@@ -140,6 +145,7 @@ def get_current_rating(soup):
 
 def get_curr_num_rating(soup):
     """
+    the function scrap and return the number of rating of the current version of the app
     :param soup: soup of the app url
     :return: the current number of ratings of the app
     """
@@ -155,6 +161,8 @@ def get_curr_num_rating(soup):
 
 def get_app_table(soup):
     """
+    the function scrap and return the data off the app_table of the app :
+    --> [age, available_in, activity, overall_num_ratings, global_rank, top_25_overall, avg_rating]
     :param soup: soup of the app url
     :return: the app_table of the app
     """
@@ -176,7 +184,7 @@ def get_app_table(soup):
 
 def get_data_by_id(id):
     """
-    Build a dictionary with app data found on the main tab
+    the function scrapp and return the data of the app found on the main tab
     :param id_set:
     :return: the data of every application according to the id
     """
@@ -184,7 +192,7 @@ def get_data_by_id(id):
         soup = get_soup('https://www.apptrace.com/app/' + str(id))
         app_detail = soup.find('div', class_='app_details')
         dev_id = soup.find('li', class_='apptitle').h2.a.get('href').split('/')[2]
-        get_dev_info(dev_id, id)
+        get_dev_info(dev_id)
         name = get_name(soup)
         price = get_price(soup)
         app_table = get_app_table(soup)
@@ -202,9 +210,9 @@ def get_data_by_id(id):
 
 def get_categories(id, dictionary_categories):
     """
-    Get app categories
-    :param id: url id of the app
-    :return: dictionary with the app categories
+    the function scrapp the categories of the app and insert both foreign key in the table app_category
+    :param id:  url id of the app
+    :param dictionary_categories:  the dictionary of the categories ( key:id, value: category name)
     """
     try:
         query = "INSERT INTO app_category(app_id, category_id) VALUES (%s,%s)"
@@ -224,7 +232,7 @@ def get_top_rankings(id, driver):
     Get app rankings in top 1/10/50/100/300
     :param id: url id of the app
     :param driver: usually Chrome
-    return list_top_rankings: a list of number of countries where the app in in top 1, top 10, top 50, top 100 and top 300
+    :return: a list of number of countries where the app in in top 1, top 10, top 50, top 100 and top 300
     """
     try:
         list_top_rankings = []
@@ -243,12 +251,12 @@ def get_top_rankings(id, driver):
 
 def rankings_countries(id, driver, list_type, dictionary_country):
     """
-    Get app countries rankings in top countries or rest of the world
+    the function scrapp and insert in the table app_country_rank the app countries rankings in the top countries
+    and in the rest of the world
     :param id: url id of the app
     :param driver: usually Chrome
     :param list_type: "top_countries" or "world"
     :param dictionary_country: the dictionary of the countries
-    :return: app rankings in top countries or rest of the world
     """
     for type_ in list_type:
         try:
@@ -269,9 +277,10 @@ def rankings_countries(id, driver, list_type, dictionary_country):
 
 def data_exist(query, id):
     """
-    check if a certain id already exist in a table
-    :param query: sql query
+     the function checks if a certain id already exist in a table,
+    :param query: sql query to perform the verification
     :param id: id of the row we want to check if already exist or not
+    :return: True if the id exist already, False otherwise
     """
     conn = pymysql.connect(host='localhost', user='root', passwd=sql_password, database='apptrace')
     mycursor = conn.cursor()
@@ -286,13 +295,19 @@ def data_exist(query, id):
 
 
 def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver):
+    """
+    The function insert the data of the application into the database
+    :param id_tag: the app id
+    :param dictionary_categories: the dictionary of the categories(key:id, value:categorie name)
+    :param dictionary_countries: the dictionary of the countries (key: country name , value: code internet country
+    :param driver:
+    """
     try:
         if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
             query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             list_info = get_data_by_id(id_tag)
             insert_in_db(list_info + get_top_rankings(id_tag, driver), query)
-            # print a supprimer
-            print((list_info[1]) + ' : row inserted in app table')
+            #print((list_info[1]) + ' : row inserted in app table')
             get_categories(id_tag, dictionary_categories)
             rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)
             logger.info(str(id_tag) + ': row inserted in app_country_rank table \n')
@@ -304,7 +319,7 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
 
 def get_app_id_by_category_by_country(dictionary_countries, dictionary_categories, driver):
     """
-    Get all app data for apps within countries and categories
+    the function pass over all the app data by countries, by categories and by [free, paid]
     :param dictionary_countries: the dictionary of key = country and value = code internet - data-link
     :param dictionary_categories: the dictionary of keys = data-link of every category ,  the values = categories name
     :param driver: usually Chrome
@@ -328,8 +343,8 @@ def get_app_id_by_category_by_country(dictionary_countries, dictionary_categorie
 
 def get_country_dic():
     """
-    Create a dictionary of all the countries we want to scrap app data from
-    :return: a dictionary where keys are countries and values are the data link : code internet of the country (ex: il)
+    The function create a dictionary of all the countries we want to scrap app data from
+    :return: a dictionary where keys are name of the countries and values are the data link : code internet of the country (ex: il)
     """
     country_chart_page = get_soup('https://www.apptrace.com/charts').find('ul', class_='countryselect')
     dict_country = {}
@@ -341,7 +356,6 @@ def get_country_dic():
         list_country.append(country.text)
         if not data_exist("SELECT * FROM country WHERE id=%s", sample_id):
             insert_in_db([sample_id, country.text], query)
-            # logger.info(str(country.text) + ' row inserted in country')
             sample_id = sample_id + 1
         else:
             logger.info(str(country.text) + ': country already in db')
@@ -367,11 +381,10 @@ def get_category_dic():
     return dic_category
 
 
-def get_dev_info(dev_id, app_id):
+def get_dev_info(dev_id):
     """
-    Get information about a developer
+    The function scrapp and insert in the table dev : id | name | ios_app_num | ranking of every developer
     :param dev_id: dev id used in url
-    :return: developer's info
     """
     try:
         if not data_exist("SELECT * FROM dev WHERE id=%s", dev_id):
@@ -453,7 +466,7 @@ def main():
 
     global sql_password
     sql_password = sql_create_database.main()
-    driver = Chrome()
+    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     # dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
     # insert into the table 'category' the id and the name of the categories
