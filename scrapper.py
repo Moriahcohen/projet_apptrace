@@ -5,7 +5,7 @@ from selenium.webdriver import Chrome
 import logging
 import argparse
 import pymysql
-import sql_create_database
+#import sql_create_database
 
 # clone our repository in github : https://github.com/Moriahcohen/projet_apptrace.git
 # Moriah Cohen Scali and Roni Chauvart
@@ -465,7 +465,7 @@ args = parser_scrap.parse_args()
 def main():
 
     global sql_password
-    sql_password = sql_create_database.main()
+    sql_password = input('please insert your sqlpassword ?' + '\n')
     driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     # dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
