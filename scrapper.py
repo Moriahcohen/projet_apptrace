@@ -466,7 +466,7 @@ def main():
 
     global sql_password
     sql_password = input('please insert your sqlpassword ?' + '\n')
-    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
+    driver = Chrome()
     # dictionary_countries = get_country_dic()
     dictionary_categories = get_category_dic()
     # insert into the table 'category' the id and the name of the categories
