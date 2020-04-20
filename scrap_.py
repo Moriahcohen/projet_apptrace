@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import datetime
 import logging
 import sql_ as sq
+import api_twitter as twi
 
 
 logger = logging.getLogger(__name__)
@@ -245,3 +246,30 @@ def get_dev_info(dev_id):
         logger.info('Dev info ok')
     except Exception as e:
         logger.exception(e)
+
+
+def twitter_info(id_tag):
+    """
+    Get a list including scores for tweets regarding an app, and popularity for an app (time between last tweet and
+    50th tweet)
+    :param id_tag: id_tag of the app
+    :return: The list of twitter stats
+    """
+    soup = get_soup('https://www.apptrace.com/app/' + str(id_tag))
+    twitter = []
+    app_name = get_name(soup)
+    tweets = twi.get_tweets(app_name)
+
+    pos_words_in_title = 0
+    neg_words_in_title = 0
+    for word in twi.POSITIVE_WORDS:
+        if word in app_name.lower().split():
+            pos_words_in_title += 1
+    for word in twi.NEGATIVE_WORDS:
+        if word in app_name.lower().split():
+            neg_words_in_title += 1
+
+    twitter.append(twi.scores_sum(tweets) - pos_words_in_title * len(tweets) + neg_words_in_title * len(tweets))
+    twitter.append(twi.time_laps(tweets))
+    logger.info('Twitter information inserted in database for %s' % app_name)
+    return twitter

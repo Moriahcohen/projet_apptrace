@@ -56,6 +56,8 @@ def create_database(sql_password, database_name):
                      "top_100 INT,"
                      "top_300 INT,"
                      "dev_id INT,"
+                     "tweet_score INT,"
+                     "tweets_time_for_50 INT,"
                      "FOREIGN KEY (dev_id) REFERENCES dev(id) )")
 
     # country
@@ -163,9 +165,9 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
     """
     try:
         if not data_exist("SELECT * FROM app WHERE id=%s", id_tag):
-            query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
+            query = "INSERT INTO app(id, name, price, curr_rating,curr_num_ratings, age, available_in, activity, overall_num_ratings,avg_rating, global_rank, top_25_overall, total_versions,dev_id, top_1,top_10,top_50,top_100,top_300, tweet_score, tweets_time_for_50) VALUES (%s,%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s) "
             list_info = sc.get_data_by_id(id_tag)
-            insert_in_db(list_info + sc.get_top_rankings(id_tag, driver), query)
+            insert_in_db(list_info + sc.get_top_rankings(id_tag, driver) + sc.twitter_info(id_tag), query)
             # print((list_info[1]) + ' : row inserted in app table')
             sc.get_categories(id_tag, dictionary_categories)
             sc.rankings_countries(id_tag, driver, ['top_countries', 'world'], dictionary_countries)

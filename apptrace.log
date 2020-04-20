@@ -1,0 +1,159 @@
+[2020-04-20 18:41:53,214 line 38] all the categories inserted in category successfully
+[2020-04-20 18:41:55,095 line 31] All countries in country dictionary
+[2020-04-20 18:41:58,061 line 241] 320947560 row inserted in dev table
+[2020-04-20 18:41:58,061 line 246] Dev info ok
+[2020-04-20 18:41:58,070 line 151] 325357320: Data from main tab ok
+[2020-04-20 18:41:58,167 line 192] Top rankings ok
+[2020-04-20 18:42:01,742 line 273] Twitter information inserted in database for Love Quotes and Sayings!
+[2020-04-20 18:42:02,072 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:42:02,076 line 171] 325357320-Books:29 inserted in app_category table successfully
+[2020-04-20 18:42:02,097 line 221] No ranking in top_countries
+[2020-04-20 18:42:02,117 line 221] No ranking in world
+[2020-04-20 18:42:02,117 line 174] 325357320: row inserted in app_country_rank table 
+
+[2020-04-20 18:42:02,118 line 90] 1 apps scrapped 
+
+[2020-04-20 18:42:03,846 line 241] 1110639431 row inserted in dev table
+[2020-04-20 18:42:03,846 line 246] Dev info ok
+[2020-04-20 18:42:03,854 line 151] 1476353318: Data from main tab ok
+[2020-04-20 18:42:03,938 line 192] Top rankings ok
+[2020-04-20 18:42:07,513 line 273] Twitter information inserted in database for Lovel
+[2020-04-20 18:42:07,802 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:42:07,805 line 171] 1476353318-Books:29 inserted in app_category table successfully
+[2020-04-20 18:42:07,825 line 221] No ranking in top_countries
+[2020-04-20 18:42:08,140 line 219] 1476353318:world rankings ok
+[2020-04-20 18:42:08,141 line 174] 1476353318: row inserted in app_country_rank table 
+
+[2020-04-20 18:42:08,141 line 90] 2 apps scrapped 
+
+[2020-04-20 18:42:09,732 line 241] 297606954 row inserted in dev table
+[2020-04-20 18:42:09,732 line 246] Dev info ok
+[2020-04-20 18:42:09,747 line 151] 302584613: Data from main tab ok
+[2020-04-20 18:42:09,835 line 192] Top rankings ok
+[2020-04-20 18:42:13,326 line 273] Twitter information inserted in database for Amazon Kindle
+[2020-04-20 18:42:13,607 line 171] 302584613-Books:29 inserted in app_category table successfully
+[2020-04-20 18:42:13,796 line 219] 302584613:top_countries rankings ok
+[2020-04-20 18:42:14,264 line 219] 302584613:world rankings ok
+[2020-04-20 18:42:14,264 line 174] 302584613: row inserted in app_country_rank table 
+
+[2020-04-20 18:42:14,264 line 90] 3 apps scrapped 
+
+[2020-04-20 18:42:16,000 line 241] 363590054 row inserted in dev table
+[2020-04-20 18:42:16,000 line 246] Dev info ok
+[2020-04-20 18:42:16,025 line 151] 363590051: Data from main tab ok
+[2020-04-20 18:42:16,111 line 192] Top rankings ok
+[2020-04-20 18:42:19,566 line 273] Twitter information inserted in database for Netflix
+[2020-04-20 18:42:19,878 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:42:19,882 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:42:20,264 line 219] 363590051:top_countries rankings ok
+[2020-04-20 18:42:25,755 line 219] 363590051:world rankings ok
+[2020-04-20 18:42:25,755 line 174] 363590051: row inserted in app_country_rank table 
+
+[2020-04-20 18:42:25,755 line 90] 4 apps scrapped 
+
+[2020-04-20 18:49:04,883 line 38] all the categories inserted in category successfully
+[2020-04-20 18:49:06,739 line 31] All countries in country dictionary
+[2020-04-20 18:49:10,477 line 241] 320947560 row inserted in dev table
+[2020-04-20 18:49:10,477 line 246] Dev info ok
+[2020-04-20 18:49:10,485 line 151] 325357320: Data from main tab ok
+[2020-04-20 18:49:10,576 line 192] Top rankings ok
+[2020-04-20 18:49:14,103 line 273] Twitter information inserted in database for Love Quotes and Sayings!
+[2020-04-20 18:49:14,388 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:49:14,392 line 171] 325357320-Books:29 inserted in app_category table successfully
+[2020-04-20 18:49:14,417 line 221] No ranking in top_countries
+[2020-04-20 18:49:14,439 line 221] No ranking in world
+[2020-04-20 18:49:14,439 line 174] 325357320: row inserted in app_country_rank table 
+
+[2020-04-20 18:49:14,439 line 90] 1 apps scrapped 
+
+[2020-04-20 18:49:15,720 line 241] 1110639431 row inserted in dev table
+[2020-04-20 18:49:15,721 line 246] Dev info ok
+[2020-04-20 18:49:15,729 line 151] 1476353318: Data from main tab ok
+[2020-04-20 18:49:15,841 line 192] Top rankings ok
+[2020-04-20 18:49:19,510 line 273] Twitter information inserted in database for Lovel
+[2020-04-20 18:49:19,777 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:49:19,781 line 171] 1476353318-Books:29 inserted in app_category table successfully
+[2020-04-20 18:49:19,801 line 221] No ranking in top_countries
+[2020-04-20 18:49:20,099 line 219] 1476353318:world rankings ok
+[2020-04-20 18:49:20,099 line 174] 1476353318: row inserted in app_country_rank table 
+
+[2020-04-20 18:49:20,099 line 90] 2 apps scrapped 
+
+[2020-04-20 18:49:21,294 line 241] 297606954 row inserted in dev table
+[2020-04-20 18:49:21,295 line 246] Dev info ok
+[2020-04-20 18:49:21,310 line 151] 302584613: Data from main tab ok
+[2020-04-20 18:49:21,632 line 192] Top rankings ok
+[2020-04-20 18:49:25,366 line 273] Twitter information inserted in database for Amazon Kindle
+[2020-04-20 18:49:25,649 line 171] 302584613-Books:29 inserted in app_category table successfully
+[2020-04-20 18:49:25,857 line 219] 302584613:top_countries rankings ok
+[2020-04-20 18:49:26,317 line 219] 302584613:world rankings ok
+[2020-04-20 18:49:26,317 line 174] 302584613: row inserted in app_country_rank table 
+
+[2020-04-20 18:49:26,317 line 90] 3 apps scrapped 
+
+[2020-04-20 18:49:27,650 line 241] 363590054 row inserted in dev table
+[2020-04-20 18:49:27,650 line 246] Dev info ok
+[2020-04-20 18:49:27,689 line 151] 363590051: Data from main tab ok
+[2020-04-20 18:49:27,826 line 192] Top rankings ok
+[2020-04-20 18:49:31,572 line 273] Twitter information inserted in database for Netflix
+[2020-04-20 18:49:32,055 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:49:32,058 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:49:32,461 line 219] 363590051:top_countries rankings ok
+[2020-04-20 18:49:38,313 line 219] 363590051:world rankings ok
+[2020-04-20 18:49:38,320 line 174] 363590051: row inserted in app_country_rank table 
+
+[2020-04-20 18:49:38,320 line 90] 4 apps scrapped 
+
+[2020-04-20 18:51:03,931 line 38] all the categories inserted in category successfully
+[2020-04-20 18:51:05,969 line 31] All countries in country dictionary
+[2020-04-20 18:51:11,691 line 241] 320947560 row inserted in dev table
+[2020-04-20 18:51:11,692 line 246] Dev info ok
+[2020-04-20 18:51:11,700 line 151] 325357320: Data from main tab ok
+[2020-04-20 18:51:11,795 line 192] Top rankings ok
+[2020-04-20 18:51:15,636 line 274] Twitter information inserted in database for Love Quotes and Sayings!
+[2020-04-20 18:51:16,000 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:51:16,004 line 171] 325357320-Books:29 inserted in app_category table successfully
+[2020-04-20 18:51:16,034 line 221] No ranking in top_countries
+[2020-04-20 18:51:16,055 line 221] No ranking in world
+[2020-04-20 18:51:16,055 line 174] 325357320: row inserted in app_country_rank table 
+
+[2020-04-20 18:51:16,056 line 90] 1 apps scrapped 
+
+[2020-04-20 18:51:17,554 line 241] 1110639431 row inserted in dev table
+[2020-04-20 18:51:17,554 line 246] Dev info ok
+[2020-04-20 18:51:17,564 line 151] 1476353318: Data from main tab ok
+[2020-04-20 18:51:17,720 line 192] Top rankings ok
+[2020-04-20 18:51:21,122 line 274] Twitter information inserted in database for Lovel
+[2020-04-20 18:51:21,414 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:51:21,417 line 171] 1476353318-Books:29 inserted in app_category table successfully
+[2020-04-20 18:51:21,438 line 221] No ranking in top_countries
+[2020-04-20 18:51:21,737 line 219] 1476353318:world rankings ok
+[2020-04-20 18:51:21,738 line 174] 1476353318: row inserted in app_country_rank table 
+
+[2020-04-20 18:51:21,738 line 90] 2 apps scrapped 
+
+[2020-04-20 18:51:23,483 line 241] 297606954 row inserted in dev table
+[2020-04-20 18:51:23,483 line 246] Dev info ok
+[2020-04-20 18:51:23,498 line 151] 302584613: Data from main tab ok
+[2020-04-20 18:51:23,583 line 192] Top rankings ok
+[2020-04-20 18:51:27,110 line 274] Twitter information inserted in database for Amazon Kindle
+[2020-04-20 18:51:27,396 line 171] 302584613-Books:29 inserted in app_category table successfully
+[2020-04-20 18:51:27,588 line 219] 302584613:top_countries rankings ok
+[2020-04-20 18:51:28,045 line 219] 302584613:world rankings ok
+[2020-04-20 18:51:28,046 line 174] 302584613: row inserted in app_country_rank table 
+
+[2020-04-20 18:51:28,046 line 90] 3 apps scrapped 
+
+[2020-04-20 18:51:29,618 line 241] 363590054 row inserted in dev table
+[2020-04-20 18:51:29,625 line 246] Dev info ok
+[2020-04-20 18:51:29,653 line 151] 363590051: Data from main tab ok
+[2020-04-20 18:51:29,752 line 192] Top rankings ok
+[2020-04-20 18:51:33,146 line 274] Twitter information inserted in database for Netflix
+[2020-04-20 18:51:33,517 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
+[2020-04-20 18:51:33,521 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
+[2020-04-20 18:51:33,895 line 219] 363590051:top_countries rankings ok
+[2020-04-20 18:51:39,459 line 219] 363590051:world rankings ok
+[2020-04-20 18:51:39,459 line 174] 363590051: row inserted in app_country_rank table 
+
+[2020-04-20 18:51:39,460 line 90] 4 apps scrapped 
+
