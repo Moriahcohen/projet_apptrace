@@ -176,3 +176,12 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
             logger.info('app already in database \n')
     except Exception as e:
         logger.exception(e)
+
+
+def main():
+    sql_password = input('Please insert your mysql password:' + '\n')
+    create_database(sql_password, 'apptrace')
+
+
+if __name__ == '__main__':
+    main()

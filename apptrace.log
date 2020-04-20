@@ -1,159 +1,194 @@
-[2020-04-20 18:41:53,214 line 38] all the categories inserted in category successfully
-[2020-04-20 18:41:55,095 line 31] All countries in country dictionary
-[2020-04-20 18:41:58,061 line 241] 320947560 row inserted in dev table
-[2020-04-20 18:41:58,061 line 246] Dev info ok
-[2020-04-20 18:41:58,070 line 151] 325357320: Data from main tab ok
-[2020-04-20 18:41:58,167 line 192] Top rankings ok
-[2020-04-20 18:42:01,742 line 273] Twitter information inserted in database for Love Quotes and Sayings!
-[2020-04-20 18:42:02,072 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:42:02,076 line 171] 325357320-Books:29 inserted in app_category table successfully
-[2020-04-20 18:42:02,097 line 221] No ranking in top_countries
-[2020-04-20 18:42:02,117 line 221] No ranking in world
-[2020-04-20 18:42:02,117 line 174] 325357320: row inserted in app_country_rank table 
+[2020-04-20 19:49:27,920 line 38] all the categories inserted in category successfully
+[2020-04-20 19:49:29,144 line 29] Belize: country already in db
+[2020-04-20 19:49:29,146 line 29] Bermuda: country already in db
+[2020-04-20 19:49:29,148 line 29] Bhutan: country already in db
+[2020-04-20 19:49:29,151 line 29] Bolivia, Plurinational State Of: country already in db
+[2020-04-20 19:49:29,153 line 29] Botswana: country already in db
+[2020-04-20 19:49:29,155 line 29] Brazil: country already in db
+[2020-04-20 19:49:29,158 line 29] Brunei Darussalam: country already in db
+[2020-04-20 19:49:29,161 line 29] Bulgaria: country already in db
+[2020-04-20 19:49:29,163 line 29] Burkina Faso: country already in db
+[2020-04-20 19:49:29,166 line 29] Cambodia: country already in db
+[2020-04-20 19:49:29,168 line 29] Canada: country already in db
+[2020-04-20 19:49:29,170 line 29] Cape Verde: country already in db
+[2020-04-20 19:49:29,172 line 29] Cayman Islands: country already in db
+[2020-04-20 19:49:29,174 line 29] Chad: country already in db
+[2020-04-20 19:49:29,176 line 29] Chile: country already in db
+[2020-04-20 19:49:29,178 line 29] China: country already in db
+[2020-04-20 19:49:29,180 line 29] Colombia: country already in db
+[2020-04-20 19:49:29,182 line 29] Congo: country already in db
+[2020-04-20 19:49:29,184 line 29] Costa Rica: country already in db
+[2020-04-20 19:49:29,186 line 29] Croatia: country already in db
+[2020-04-20 19:49:29,188 line 29] Cyprus: country already in db
+[2020-04-20 19:49:29,190 line 29] Czech Republic: country already in db
+[2020-04-20 19:49:29,192 line 29] Denmark: country already in db
+[2020-04-20 19:49:29,194 line 29] Dominica: country already in db
+[2020-04-20 19:49:29,196 line 29] Dominican Republic: country already in db
+[2020-04-20 19:49:29,198 line 29] Ecuador: country already in db
+[2020-04-20 19:49:29,200 line 29] Egypt: country already in db
+[2020-04-20 19:49:29,202 line 29] El Salvador: country already in db
+[2020-04-20 19:49:29,204 line 29] Estonia: country already in db
+[2020-04-20 19:49:29,206 line 29] Fiji: country already in db
+[2020-04-20 19:49:29,207 line 29] Finland: country already in db
+[2020-04-20 19:49:29,209 line 29] France: country already in db
+[2020-04-20 19:49:29,211 line 29] Gambia: country already in db
+[2020-04-20 19:49:29,213 line 29] Germany: country already in db
+[2020-04-20 19:49:29,215 line 29] Ghana: country already in db
+[2020-04-20 19:49:29,217 line 29] Turkey: country already in db
+[2020-04-20 19:49:29,219 line 29] Turkmenistan: country already in db
+[2020-04-20 19:49:29,221 line 29] Greece: country already in db
+[2020-04-20 19:49:29,223 line 29] Grenada: country already in db
+[2020-04-20 19:49:29,225 line 29] Guatemala: country already in db
+[2020-04-20 19:49:29,227 line 29] Guinea-Bissau: country already in db
+[2020-04-20 19:49:29,229 line 29] Guyana: country already in db
+[2020-04-20 19:49:29,232 line 29] Honduras: country already in db
+[2020-04-20 19:49:29,234 line 29] Hong Kong: country already in db
+[2020-04-20 19:49:29,237 line 29] Hungary: country already in db
+[2020-04-20 19:49:29,239 line 29] Iceland: country already in db
+[2020-04-20 19:49:29,241 line 29] India: country already in db
+[2020-04-20 19:49:29,243 line 29] Indonesia: country already in db
+[2020-04-20 19:49:29,245 line 29] Ireland: country already in db
+[2020-04-20 19:49:29,247 line 29] Israel: country already in db
+[2020-04-20 19:49:29,249 line 29] Italy: country already in db
+[2020-04-20 19:49:29,251 line 29] Jamaica: country already in db
+[2020-04-20 19:49:29,253 line 29] Japan: country already in db
+[2020-04-20 19:49:29,255 line 29] Jordan: country already in db
+[2020-04-20 19:49:29,257 line 29] Kazakhstan: country already in db
+[2020-04-20 19:49:29,259 line 29] Kuwait: country already in db
+[2020-04-20 19:49:29,261 line 29] Kyrgyzstan: country already in db
+[2020-04-20 19:49:29,263 line 29] Latvia: country already in db
+[2020-04-20 19:49:29,266 line 29] Lebanon: country already in db
+[2020-04-20 19:49:29,267 line 29] Liberia: country already in db
+[2020-04-20 19:49:29,270 line 29] Lithuania: country already in db
+[2020-04-20 19:49:29,272 line 29] Luxembourg: country already in db
+[2020-04-20 19:49:29,274 line 29] Macao: country already in db
+[2020-04-20 19:49:29,276 line 29] Madagascar: country already in db
+[2020-04-20 19:49:29,278 line 29] Malawi: country already in db
+[2020-04-20 19:49:29,280 line 29] Malaysia: country already in db
+[2020-04-20 19:49:29,281 line 29] Mali: country already in db
+[2020-04-20 19:49:29,283 line 29] Malta: country already in db
+[2020-04-20 19:49:29,285 line 29] Kenya: country already in db
+[2020-04-20 19:49:29,287 line 29] Mauritania: country already in db
+[2020-04-20 19:49:29,289 line 29] Mauritius: country already in db
+[2020-04-20 19:49:29,291 line 29] Mexico: country already in db
+[2020-04-20 19:49:29,293 line 29] Mongolia: country already in db
+[2020-04-20 19:49:29,295 line 29] Montserrat: country already in db
+[2020-04-20 19:49:29,297 line 29] Mozambique: country already in db
+[2020-04-20 19:49:29,299 line 29] Namibia: country already in db
+[2020-04-20 19:49:29,301 line 29] Nepal: country already in db
+[2020-04-20 19:49:29,303 line 29] Netherlands: country already in db
+[2020-04-20 19:49:29,304 line 29] New Zealand: country already in db
+[2020-04-20 19:49:29,306 line 29] Nicaragua: country already in db
+[2020-04-20 19:49:29,308 line 29] Niger: country already in db
+[2020-04-20 19:49:29,310 line 29] Nigeria: country already in db
+[2020-04-20 19:49:29,312 line 29] Norway: country already in db
+[2020-04-20 19:49:29,314 line 29] Oman: country already in db
+[2020-04-20 19:49:29,316 line 29] Pakistan: country already in db
+[2020-04-20 19:49:29,318 line 29] Palau: country already in db
+[2020-04-20 19:49:29,319 line 29] Panama: country already in db
+[2020-04-20 19:49:29,322 line 29] Papua New Guinea: country already in db
+[2020-04-20 19:49:29,324 line 29] Paraguay: country already in db
+[2020-04-20 19:49:29,326 line 29] Peru: country already in db
+[2020-04-20 19:49:29,328 line 29] Philippines: country already in db
+[2020-04-20 19:49:29,330 line 29] Poland: country already in db
+[2020-04-20 19:49:29,332 line 29] Portugal: country already in db
+[2020-04-20 19:49:29,334 line 29] Qatar: country already in db
+[2020-04-20 19:49:29,336 line 29] Romania: country already in db
+[2020-04-20 19:49:29,338 line 29] Saint Kitts And Nevis: country already in db
+[2020-04-20 19:49:29,339 line 29] Saint Lucia: country already in db
+[2020-04-20 19:49:29,341 line 29] Saint Vincent And The Grenedines: country already in db
+[2020-04-20 19:49:29,343 line 29] Sao Tome and Principe: country already in db
+[2020-04-20 19:49:29,345 line 29] Saudi Arabia: country already in db
+[2020-04-20 19:49:29,347 line 29] Senegal: country already in db
+[2020-04-20 19:49:29,349 line 29] Seychelles: country already in db
+[2020-04-20 19:49:29,351 line 29] Sierra Leone: country already in db
+[2020-04-20 19:49:29,353 line 29] Singapore: country already in db
+[2020-04-20 19:49:29,357 line 29] Slovakia: country already in db
+[2020-04-20 19:49:29,359 line 29] Slovenia: country already in db
+[2020-04-20 19:49:29,361 line 29] Solomon Islands: country already in db
+[2020-04-20 19:49:29,363 line 29] South Africa: country already in db
+[2020-04-20 19:49:29,365 line 29] Albania: country already in db
+[2020-04-20 19:49:29,367 line 29] Algeria: country already in db
+[2020-04-20 19:49:29,368 line 29] Angola: country already in db
+[2020-04-20 19:49:29,370 line 29] Anguilla: country already in db
+[2020-04-20 19:49:29,372 line 29] Antigua and Barbuda: country already in db
+[2020-04-20 19:49:29,374 line 29] Argentina: country already in db
+[2020-04-20 19:49:29,376 line 29] Armenia: country already in db
+[2020-04-20 19:49:29,379 line 29] Australia: country already in db
+[2020-04-20 19:49:29,381 line 29] Austria: country already in db
+[2020-04-20 19:49:29,382 line 29] Azerbaijan: country already in db
+[2020-04-20 19:49:29,384 line 29] Bahamas: country already in db
+[2020-04-20 19:49:29,386 line 29] Bahrain: country already in db
+[2020-04-20 19:49:29,388 line 29] Barbados: country already in db
+[2020-04-20 19:49:29,390 line 29] Belarus: country already in db
+[2020-04-20 19:49:29,392 line 29] Belgium: country already in db
+[2020-04-20 19:49:29,393 line 29] Benin: country already in db
+[2020-04-20 19:49:29,395 line 29] Spain: country already in db
+[2020-04-20 19:49:29,397 line 29] Sri Lanka: country already in db
+[2020-04-20 19:49:29,399 line 29] Suriname: country already in db
+[2020-04-20 19:49:29,401 line 29] Swaziland: country already in db
+[2020-04-20 19:49:29,403 line 29] Sweden: country already in db
+[2020-04-20 19:49:29,405 line 29] Switzerland: country already in db
+[2020-04-20 19:49:29,407 line 29] Taiwan, Province Of China: country already in db
+[2020-04-20 19:49:29,409 line 29] Tajikistan: country already in db
+[2020-04-20 19:49:29,411 line 29] Thailand: country already in db
+[2020-04-20 19:49:29,413 line 29] Trinidad and Tobago: country already in db
+[2020-04-20 19:49:29,415 line 29] Tunisia: country already in db
+[2020-04-20 19:49:29,417 line 29] Moldova: country already in db
+[2020-04-20 19:49:29,419 line 29] Macedonia: country already in db
+[2020-04-20 19:49:29,421 line 29] Tanzania: country already in db
+[2020-04-20 19:49:29,422 line 29] Lao: country already in db
+[2020-04-20 19:49:29,424 line 29] Micronesia: country already in db
+[2020-04-20 19:49:29,426 line 29] Russia: country already in db
+[2020-04-20 19:49:29,428 line 29] Turks and Caicos Islands: country already in db
+[2020-04-20 19:49:29,430 line 29] Uganda: country already in db
+[2020-04-20 19:49:29,432 line 29] Ukraine: country already in db
+[2020-04-20 19:49:29,434 line 29] United Arab Emirates: country already in db
+[2020-04-20 19:49:29,436 line 29] United Kingdom: country already in db
+[2020-04-20 19:49:29,438 line 29] United States: country already in db
+[2020-04-20 19:49:29,440 line 29] Uruguay: country already in db
+[2020-04-20 19:49:29,442 line 29] Uzbekistan: country already in db
+[2020-04-20 19:49:29,444 line 29] Viet Nam: country already in db
+[2020-04-20 19:49:29,446 line 29] Yemen: country already in db
+[2020-04-20 19:49:29,448 line 29] Zimbabwe: country already in db
+[2020-04-20 19:49:29,450 line 29] South Korea: country already in db
+[2020-04-20 19:49:29,452 line 29] Virgin Islands: country already in db
+[2020-04-20 19:49:29,454 line 29] Venezuela: country already in db
+[2020-04-20 19:49:32,927 line 241] 479516146 row inserted in dev table
+[2020-04-20 19:49:32,927 line 246] Dev info ok
+[2020-04-20 19:49:32,946 line 151] 479516143: Data from main tab ok
+[2020-04-20 19:49:33,087 line 192] Top rankings ok
+[2020-04-20 19:49:37,078 line 274] Twitter information inserted in database for Minecraft
+[2020-04-20 19:49:37,370 line 171] 479516143-Games:26 inserted in app_category table successfully
+[2020-04-20 19:49:37,373 line 171] 479516143-Simulation:60 inserted in app_category table successfully
+[2020-04-20 19:49:37,378 line 171] 479516143-Adventure:75 inserted in app_category table successfully
+[2020-04-20 19:49:37,862 line 219] 479516143:top_countries rankings ok
+[2020-04-20 19:49:43,755 line 219] 479516143:world rankings ok
+[2020-04-20 19:49:43,755 line 174] 479516143: row inserted in app_country_rank table 
 
-[2020-04-20 18:42:02,118 line 90] 1 apps scrapped 
+[2020-04-20 19:49:43,755 line 90] 1 apps scrapped 
 
-[2020-04-20 18:42:03,846 line 241] 1110639431 row inserted in dev table
-[2020-04-20 18:42:03,846 line 246] Dev info ok
-[2020-04-20 18:42:03,854 line 151] 1476353318: Data from main tab ok
-[2020-04-20 18:42:03,938 line 192] Top rankings ok
-[2020-04-20 18:42:07,513 line 273] Twitter information inserted in database for Lovel
-[2020-04-20 18:42:07,802 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:42:07,805 line 171] 1476353318-Books:29 inserted in app_category table successfully
-[2020-04-20 18:42:07,825 line 221] No ranking in top_countries
-[2020-04-20 18:42:08,140 line 219] 1476353318:world rankings ok
-[2020-04-20 18:42:08,141 line 174] 1476353318: row inserted in app_country_rank table 
+[2020-04-20 19:49:45,451 line 241] 298856275 row inserted in dev table
+[2020-04-20 19:49:45,452 line 246] Dev info ok
+[2020-04-20 19:49:45,465 line 151] 586447913: Data from main tab ok
+[2020-04-20 19:49:45,561 line 192] Top rankings ok
+[2020-04-20 19:49:49,150 line 274] Twitter information inserted in database for Microsoft Word
+[2020-04-20 19:49:49,523 line 171] 586447913-Productivity:2 inserted in app_category table successfully
+[2020-04-20 19:49:49,956 line 219] 586447913:top_countries rankings ok
+[2020-04-20 19:49:54,395 line 219] 586447913:world rankings ok
+[2020-04-20 19:49:54,396 line 174] 586447913: row inserted in app_country_rank table 
 
-[2020-04-20 18:42:08,141 line 90] 2 apps scrapped 
+[2020-04-20 19:49:54,396 line 90] 2 apps scrapped 
 
-[2020-04-20 18:42:09,732 line 241] 297606954 row inserted in dev table
-[2020-04-20 18:42:09,732 line 246] Dev info ok
-[2020-04-20 18:42:09,747 line 151] 302584613: Data from main tab ok
-[2020-04-20 18:42:09,835 line 192] Top rankings ok
-[2020-04-20 18:42:13,326 line 273] Twitter information inserted in database for Amazon Kindle
-[2020-04-20 18:42:13,607 line 171] 302584613-Books:29 inserted in app_category table successfully
-[2020-04-20 18:42:13,796 line 219] 302584613:top_countries rankings ok
-[2020-04-20 18:42:14,264 line 219] 302584613:world rankings ok
-[2020-04-20 18:42:14,264 line 174] 302584613: row inserted in app_country_rank table 
+[2020-04-20 19:49:56,038 line 241] 284882218 row inserted in dev table
+[2020-04-20 19:49:56,038 line 246] Dev info ok
+[2020-04-20 19:49:56,063 line 151] 284882215: Data from main tab ok
+[2020-04-20 19:49:56,155 line 192] Top rankings ok
+[2020-04-20 19:49:59,655 line 274] Twitter information inserted in database for Facebook
+[2020-04-20 19:50:00,027 line 171] 284882215-Social Networking:4 inserted in app_category table successfully
+[2020-04-20 19:50:00,455 line 219] 284882215:top_countries rankings ok
+[2020-04-20 19:50:06,463 line 219] 284882215:world rankings ok
+[2020-04-20 19:50:06,463 line 174] 284882215: row inserted in app_country_rank table 
 
-[2020-04-20 18:42:14,264 line 90] 3 apps scrapped 
-
-[2020-04-20 18:42:16,000 line 241] 363590054 row inserted in dev table
-[2020-04-20 18:42:16,000 line 246] Dev info ok
-[2020-04-20 18:42:16,025 line 151] 363590051: Data from main tab ok
-[2020-04-20 18:42:16,111 line 192] Top rankings ok
-[2020-04-20 18:42:19,566 line 273] Twitter information inserted in database for Netflix
-[2020-04-20 18:42:19,878 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:42:19,882 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:42:20,264 line 219] 363590051:top_countries rankings ok
-[2020-04-20 18:42:25,755 line 219] 363590051:world rankings ok
-[2020-04-20 18:42:25,755 line 174] 363590051: row inserted in app_country_rank table 
-
-[2020-04-20 18:42:25,755 line 90] 4 apps scrapped 
-
-[2020-04-20 18:49:04,883 line 38] all the categories inserted in category successfully
-[2020-04-20 18:49:06,739 line 31] All countries in country dictionary
-[2020-04-20 18:49:10,477 line 241] 320947560 row inserted in dev table
-[2020-04-20 18:49:10,477 line 246] Dev info ok
-[2020-04-20 18:49:10,485 line 151] 325357320: Data from main tab ok
-[2020-04-20 18:49:10,576 line 192] Top rankings ok
-[2020-04-20 18:49:14,103 line 273] Twitter information inserted in database for Love Quotes and Sayings!
-[2020-04-20 18:49:14,388 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:49:14,392 line 171] 325357320-Books:29 inserted in app_category table successfully
-[2020-04-20 18:49:14,417 line 221] No ranking in top_countries
-[2020-04-20 18:49:14,439 line 221] No ranking in world
-[2020-04-20 18:49:14,439 line 174] 325357320: row inserted in app_country_rank table 
-
-[2020-04-20 18:49:14,439 line 90] 1 apps scrapped 
-
-[2020-04-20 18:49:15,720 line 241] 1110639431 row inserted in dev table
-[2020-04-20 18:49:15,721 line 246] Dev info ok
-[2020-04-20 18:49:15,729 line 151] 1476353318: Data from main tab ok
-[2020-04-20 18:49:15,841 line 192] Top rankings ok
-[2020-04-20 18:49:19,510 line 273] Twitter information inserted in database for Lovel
-[2020-04-20 18:49:19,777 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:49:19,781 line 171] 1476353318-Books:29 inserted in app_category table successfully
-[2020-04-20 18:49:19,801 line 221] No ranking in top_countries
-[2020-04-20 18:49:20,099 line 219] 1476353318:world rankings ok
-[2020-04-20 18:49:20,099 line 174] 1476353318: row inserted in app_country_rank table 
-
-[2020-04-20 18:49:20,099 line 90] 2 apps scrapped 
-
-[2020-04-20 18:49:21,294 line 241] 297606954 row inserted in dev table
-[2020-04-20 18:49:21,295 line 246] Dev info ok
-[2020-04-20 18:49:21,310 line 151] 302584613: Data from main tab ok
-[2020-04-20 18:49:21,632 line 192] Top rankings ok
-[2020-04-20 18:49:25,366 line 273] Twitter information inserted in database for Amazon Kindle
-[2020-04-20 18:49:25,649 line 171] 302584613-Books:29 inserted in app_category table successfully
-[2020-04-20 18:49:25,857 line 219] 302584613:top_countries rankings ok
-[2020-04-20 18:49:26,317 line 219] 302584613:world rankings ok
-[2020-04-20 18:49:26,317 line 174] 302584613: row inserted in app_country_rank table 
-
-[2020-04-20 18:49:26,317 line 90] 3 apps scrapped 
-
-[2020-04-20 18:49:27,650 line 241] 363590054 row inserted in dev table
-[2020-04-20 18:49:27,650 line 246] Dev info ok
-[2020-04-20 18:49:27,689 line 151] 363590051: Data from main tab ok
-[2020-04-20 18:49:27,826 line 192] Top rankings ok
-[2020-04-20 18:49:31,572 line 273] Twitter information inserted in database for Netflix
-[2020-04-20 18:49:32,055 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:49:32,058 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:49:32,461 line 219] 363590051:top_countries rankings ok
-[2020-04-20 18:49:38,313 line 219] 363590051:world rankings ok
-[2020-04-20 18:49:38,320 line 174] 363590051: row inserted in app_country_rank table 
-
-[2020-04-20 18:49:38,320 line 90] 4 apps scrapped 
-
-[2020-04-20 18:51:03,931 line 38] all the categories inserted in category successfully
-[2020-04-20 18:51:05,969 line 31] All countries in country dictionary
-[2020-04-20 18:51:11,691 line 241] 320947560 row inserted in dev table
-[2020-04-20 18:51:11,692 line 246] Dev info ok
-[2020-04-20 18:51:11,700 line 151] 325357320: Data from main tab ok
-[2020-04-20 18:51:11,795 line 192] Top rankings ok
-[2020-04-20 18:51:15,636 line 274] Twitter information inserted in database for Love Quotes and Sayings!
-[2020-04-20 18:51:16,000 line 171] 325357320-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:51:16,004 line 171] 325357320-Books:29 inserted in app_category table successfully
-[2020-04-20 18:51:16,034 line 221] No ranking in top_countries
-[2020-04-20 18:51:16,055 line 221] No ranking in world
-[2020-04-20 18:51:16,055 line 174] 325357320: row inserted in app_country_rank table 
-
-[2020-04-20 18:51:16,056 line 90] 1 apps scrapped 
-
-[2020-04-20 18:51:17,554 line 241] 1110639431 row inserted in dev table
-[2020-04-20 18:51:17,554 line 246] Dev info ok
-[2020-04-20 18:51:17,564 line 151] 1476353318: Data from main tab ok
-[2020-04-20 18:51:17,720 line 192] Top rankings ok
-[2020-04-20 18:51:21,122 line 274] Twitter information inserted in database for Lovel
-[2020-04-20 18:51:21,414 line 171] 1476353318-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:51:21,417 line 171] 1476353318-Books:29 inserted in app_category table successfully
-[2020-04-20 18:51:21,438 line 221] No ranking in top_countries
-[2020-04-20 18:51:21,737 line 219] 1476353318:world rankings ok
-[2020-04-20 18:51:21,738 line 174] 1476353318: row inserted in app_country_rank table 
-
-[2020-04-20 18:51:21,738 line 90] 2 apps scrapped 
-
-[2020-04-20 18:51:23,483 line 241] 297606954 row inserted in dev table
-[2020-04-20 18:51:23,483 line 246] Dev info ok
-[2020-04-20 18:51:23,498 line 151] 302584613: Data from main tab ok
-[2020-04-20 18:51:23,583 line 192] Top rankings ok
-[2020-04-20 18:51:27,110 line 274] Twitter information inserted in database for Amazon Kindle
-[2020-04-20 18:51:27,396 line 171] 302584613-Books:29 inserted in app_category table successfully
-[2020-04-20 18:51:27,588 line 219] 302584613:top_countries rankings ok
-[2020-04-20 18:51:28,045 line 219] 302584613:world rankings ok
-[2020-04-20 18:51:28,046 line 174] 302584613: row inserted in app_country_rank table 
-
-[2020-04-20 18:51:28,046 line 90] 3 apps scrapped 
-
-[2020-04-20 18:51:29,618 line 241] 363590054 row inserted in dev table
-[2020-04-20 18:51:29,625 line 246] Dev info ok
-[2020-04-20 18:51:29,653 line 151] 363590051: Data from main tab ok
-[2020-04-20 18:51:29,752 line 192] Top rankings ok
-[2020-04-20 18:51:33,146 line 274] Twitter information inserted in database for Netflix
-[2020-04-20 18:51:33,517 line 171] 363590051-Lifestyle:24 inserted in app_category table successfully
-[2020-04-20 18:51:33,521 line 171] 363590051-Entertainment:28 inserted in app_category table successfully
-[2020-04-20 18:51:33,895 line 219] 363590051:top_countries rankings ok
-[2020-04-20 18:51:39,459 line 219] 363590051:world rankings ok
-[2020-04-20 18:51:39,459 line 174] 363590051: row inserted in app_country_rank table 
-
-[2020-04-20 18:51:39,460 line 90] 4 apps scrapped 
+[2020-04-20 19:50:06,463 line 90] 3 apps scrapped 
 
