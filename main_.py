@@ -28,7 +28,7 @@ password = input('Please insert your mysql password:' + '\n')
 def main():
     global password
     # sq.create_database(password, 'apptrace')
-    driver = Chrome()
+    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     dictionary_categories = col.get_category_dic()
     # insert into the table 'category' the id and the name of the categories
     query = "INSERT INTO category(id, category) VALUES (%s,%s)"

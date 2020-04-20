@@ -257,19 +257,22 @@ def twitter_info(id_tag):
     """
     soup = get_soup('https://www.apptrace.com/app/' + str(id_tag))
     twitter = []
-    app_name = get_name(soup)
-    tweets = twi.get_tweets(app_name)
+    try:
+        app_name = get_name(soup)
+        tweets = twi.get_tweets(app_name)
 
-    pos_words_in_title = 0
-    neg_words_in_title = 0
-    for word in twi.POSITIVE_WORDS:
-        if word in app_name.lower().split():
-            pos_words_in_title += 1
-    for word in twi.NEGATIVE_WORDS:
-        if word in app_name.lower().split():
-            neg_words_in_title += 1
+        pos_words_in_title = 0
+        neg_words_in_title = 0
+        for word in twi.POSITIVE_WORDS:
+            if word in app_name.lower().split():
+                pos_words_in_title += 1
+        for word in twi.NEGATIVE_WORDS:
+            if word in app_name.lower().split():
+                neg_words_in_title += 1
 
-    twitter.append(twi.scores_sum(tweets) - pos_words_in_title * len(tweets) + neg_words_in_title * len(tweets))
-    twitter.append(twi.time_laps(tweets))
-    logger.info('Twitter information inserted in database for %s' % app_name)
-    return twitter
+        twitter.append(twi.scores_sum(tweets) - pos_words_in_title * len(tweets) + neg_words_in_title * len(tweets))
+        twitter.append(twi.time_laps(tweets))
+        logger.info('Twitter information inserted in database for ' + str(id_tag))
+        return twitter
+    except Exception as e:
+        print(e)
