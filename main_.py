@@ -1,4 +1,4 @@
-from selenium.webdriver import Chrome
+from selenium import webdriver
 import logging
 import argparse
 import sql_ as sq
@@ -28,7 +28,14 @@ password = input('Please insert your mysql password:' + '\n')
 def main():
     global password
     # sq.create_database(password, 'apptrace')
-    driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
+    service = webdriver.chrome.service.Service('./chromedriver')
+    service.start()
+    options = webdriver.ChromeOptions()
+    options.add_argument('--headless')
+    options = options.to_capabilities()
+    driver = webdriver.Remote(service.service_url, options)
+    #driver.get("https://www.youtube.com")
+    #driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     dictionary_categories = col.get_category_dic()
     # insert into the table 'category' the id and the name of the categories
     query = "INSERT INTO category(id, category) VALUES (%s,%s)"
