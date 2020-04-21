@@ -2036,3 +2036,1003 @@
 [2020-04-21 17:05:36,455 line 246] Dev info ok
 [2020-04-21 17:05:36,466 line 151] 988485030: Data from main tab ok
 [2020-04-21 17:05:36,586 line 192] Top rankings ok
+[2020-04-21 17:14:22,944 line 275] Twitter information inserted in database for 988485030
+[2020-04-21 17:14:23,463 line 171] 988485030-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:14:23,467 line 171] 988485030-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:23,514 line 221] No ranking in top_countries
+[2020-04-21 17:14:23,557 line 221] No ranking in world
+[2020-04-21 17:14:23,558 line 174] 988485030: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:23,558 line 69] Scrapping in: Belize/Books/free
+[2020-04-21 17:14:25,637 line 241] 783771619 row inserted in dev table
+[2020-04-21 17:14:25,639 line 246] Dev info ok
+[2020-04-21 17:14:25,654 line 151] 1205999121: Data from main tab ok
+[2020-04-21 17:14:25,791 line 192] Top rankings ok
+[2020-04-21 17:14:29,888 line 275] Twitter information inserted in database for 1205999121
+[2020-04-21 17:14:30,368 line 171] 1205999121-Lifestyle:24 inserted in app_category table successfully
+[2020-04-21 17:14:30,374 line 171] 1205999121-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:30,414 line 221] No ranking in top_countries
+[2020-04-21 17:14:30,449 line 221] No ranking in world
+[2020-04-21 17:14:30,450 line 174] 1205999121: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:30,450 line 69] Scrapping in: Belize/Books/free
+[2020-04-21 17:14:32,503 line 241] 814321157 row inserted in dev table
+[2020-04-21 17:14:32,503 line 246] Dev info ok
+[2020-04-21 17:14:32,507 line 124] No average rating on overall
+[2020-04-21 17:14:32,511 line 86] No current rating
+[2020-04-21 17:14:32,518 line 151] 1001922572: Data from main tab ok
+[2020-04-21 17:14:32,709 line 192] Top rankings ok
+[2020-04-21 17:14:33,687 line 275] Twitter information inserted in database for 1001922572
+[2020-04-21 17:14:34,100 line 171] 1001922572-Lifestyle:24 inserted in app_category table successfully
+[2020-04-21 17:14:34,109 line 171] 1001922572-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:34,138 line 221] No ranking in top_countries
+[2020-04-21 17:14:34,198 line 221] No ranking in world
+[2020-04-21 17:14:34,198 line 174] 1001922572: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:34,199 line 69] Scrapping in: Belize/Books/free
+[2020-04-21 17:14:36,269 line 241] 1449257342 row inserted in dev table
+[2020-04-21 17:14:36,270 line 246] Dev info ok
+[2020-04-21 17:14:36,276 line 86] No current rating
+[2020-04-21 17:14:36,281 line 151] 1387139854: Data from main tab ok
+[2020-04-21 17:14:36,410 line 192] Top rankings ok
+[2020-04-21 17:14:37,953 line 275] Twitter information inserted in database for 1387139854
+[2020-04-21 17:14:38,365 line 171] 1387139854-Entertainment:28 inserted in app_category table successfully
+[2020-04-21 17:14:38,369 line 171] 1387139854-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:38,401 line 221] No ranking in top_countries
+[2020-04-21 17:14:38,436 line 221] No ranking in world
+[2020-04-21 17:14:38,436 line 174] 1387139854: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:43,630 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:14:44,929 line 245] Dev exist already
+[2020-04-21 17:14:44,930 line 246] Dev info ok
+[2020-04-21 17:14:44,946 line 151] 387136454: Data from main tab ok
+[2020-04-21 17:14:45,098 line 192] Top rankings ok
+[2020-04-21 17:14:46,764 line 275] Twitter information inserted in database for 387136454
+[2020-04-21 17:14:47,184 line 171] 387136454-Education:27 inserted in app_category table successfully
+[2020-04-21 17:14:47,188 line 171] 387136454-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:47,216 line 221] No ranking in top_countries
+[2020-04-21 17:14:47,245 line 221] No ranking in world
+[2020-04-21 17:14:47,245 line 174] 387136454: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:47,245 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:14:48,416 line 245] Dev exist already
+[2020-04-21 17:14:48,416 line 246] Dev info ok
+[2020-04-21 17:14:48,431 line 151] 531204555: Data from main tab ok
+[2020-04-21 17:14:48,562 line 192] Top rankings ok
+[2020-04-21 17:14:49,472 line 275] Twitter information inserted in database for 531204555
+[2020-04-21 17:14:49,896 line 171] 531204555-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:49,941 line 221] No ranking in top_countries
+[2020-04-21 17:14:50,194 line 219] 531204555:world rankings ok
+[2020-04-21 17:14:50,194 line 174] 531204555: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:50,195 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:14:51,363 line 245] Dev exist already
+[2020-04-21 17:14:51,363 line 246] Dev info ok
+[2020-04-21 17:14:51,386 line 151] 573235547: Data from main tab ok
+[2020-04-21 17:14:51,555 line 192] Top rankings ok
+[2020-04-21 17:14:53,258 line 275] Twitter information inserted in database for 573235547
+[2020-04-21 17:14:53,662 line 171] 573235547-Entertainment:28 inserted in app_category table successfully
+[2020-04-21 17:14:53,666 line 171] 573235547-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:53,698 line 221] No ranking in top_countries
+[2020-04-21 17:14:54,442 line 219] 573235547:world rankings ok
+[2020-04-21 17:14:54,443 line 174] 573235547: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:54,443 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:14:56,392 line 241] 577374974 row inserted in dev table
+[2020-04-21 17:14:56,393 line 246] Dev info ok
+[2020-04-21 17:14:56,406 line 151] 667361209: Data from main tab ok
+[2020-04-21 17:14:56,538 line 192] Top rankings ok
+[2020-04-21 17:14:57,605 line 275] Twitter information inserted in database for 667361209
+[2020-04-21 17:14:58,000 line 171] 667361209-Education:27 inserted in app_category table successfully
+[2020-04-21 17:14:58,004 line 171] 667361209-Books:29 inserted in app_category table successfully
+[2020-04-21 17:14:58,032 line 221] No ranking in top_countries
+[2020-04-21 17:14:58,063 line 221] No ranking in world
+[2020-04-21 17:14:58,063 line 174] 667361209: row inserted in app_country_rank table 
+
+[2020-04-21 17:14:58,063 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:14:59,806 line 241] 318015371 row inserted in dev table
+[2020-04-21 17:14:59,806 line 246] Dev info ok
+[2020-04-21 17:14:59,825 line 151] 324516521: Data from main tab ok
+[2020-04-21 17:14:59,945 line 192] Top rankings ok
+[2020-04-21 17:15:00,959 line 275] Twitter information inserted in database for 324516521
+[2020-04-21 17:15:01,359 line 171] 324516521-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:15:01,363 line 171] 324516521-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:01,391 line 221] No ranking in top_countries
+[2020-04-21 17:15:01,418 line 221] No ranking in world
+[2020-04-21 17:15:01,418 line 174] 324516521: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:01,418 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:03,336 line 241] 666759463 row inserted in dev table
+[2020-04-21 17:15:03,336 line 246] Dev info ok
+[2020-04-21 17:15:03,375 line 151] 434756152: Data from main tab ok
+[2020-04-21 17:15:03,559 line 192] Top rankings ok
+[2020-04-21 17:15:07,138 line 275] Twitter information inserted in database for 434756152
+[2020-04-21 17:15:07,552 line 171] 434756152-Education:27 inserted in app_category table successfully
+[2020-04-21 17:15:07,556 line 171] 434756152-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:07,621 line 221] No ranking in top_countries
+[2020-04-21 17:15:07,968 line 219] 434756152:world rankings ok
+[2020-04-21 17:15:07,968 line 174] 434756152: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:07,968 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:09,894 line 241] 717594986 row inserted in dev table
+[2020-04-21 17:15:09,894 line 246] Dev info ok
+[2020-04-21 17:15:09,913 line 151] 738947482: Data from main tab ok
+[2020-04-21 17:15:10,160 line 192] Top rankings ok
+[2020-04-21 17:15:11,142 line 275] Twitter information inserted in database for 738947482
+[2020-04-21 17:15:11,578 line 171] 738947482-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:15:11,582 line 171] 738947482-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:11,673 line 221] No ranking in top_countries
+[2020-04-21 17:15:11,740 line 221] No ranking in world
+[2020-04-21 17:15:11,740 line 174] 738947482: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:11,740 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:12,997 line 245] Dev exist already
+[2020-04-21 17:15:12,997 line 246] Dev info ok
+[2020-04-21 17:15:13,026 line 151] 310295776: Data from main tab ok
+[2020-04-21 17:15:13,282 line 192] Top rankings ok
+[2020-04-21 17:15:16,826 line 275] Twitter information inserted in database for 310295776
+[2020-04-21 17:15:17,211 line 171] 310295776-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:15:17,215 line 171] 310295776-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:17,243 line 221] No ranking in top_countries
+[2020-04-21 17:15:17,362 line 219] 310295776:world rankings ok
+[2020-04-21 17:15:17,362 line 174] 310295776: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:17,362 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:19,195 line 241] 433671404 row inserted in dev table
+[2020-04-21 17:15:19,195 line 246] Dev info ok
+[2020-04-21 17:15:19,210 line 151] 441521818: Data from main tab ok
+[2020-04-21 17:15:19,337 line 192] Top rankings ok
+[2020-04-21 17:15:20,344 line 275] Twitter information inserted in database for 441521818
+[2020-04-21 17:15:20,773 line 171] 441521818-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:15:20,776 line 171] 441521818-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:20,806 line 221] No ranking in top_countries
+[2020-04-21 17:15:20,835 line 221] No ranking in world
+[2020-04-21 17:15:20,835 line 174] 441521818: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:20,836 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:22,614 line 241] 444535393 row inserted in dev table
+[2020-04-21 17:15:22,614 line 246] Dev info ok
+[2020-04-21 17:15:22,627 line 151] 444553118: Data from main tab ok
+[2020-04-21 17:15:22,759 line 192] Top rankings ok
+[2020-04-21 17:15:26,200 line 275] Twitter information inserted in database for 444553118
+[2020-04-21 17:15:26,625 line 171] 444553118-Lifestyle:24 inserted in app_category table successfully
+[2020-04-21 17:15:26,628 line 171] 444553118-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:26,657 line 221] No ranking in top_countries
+[2020-04-21 17:15:26,775 line 219] 444553118:world rankings ok
+[2020-04-21 17:15:26,775 line 174] 444553118: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:26,775 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:27,920 line 245] Dev exist already
+[2020-04-21 17:15:27,921 line 246] Dev info ok
+[2020-04-21 17:15:27,934 line 151] 317776727: Data from main tab ok
+[2020-04-21 17:15:28,062 line 192] Top rankings ok
+[2020-04-21 17:15:28,973 line 275] Twitter information inserted in database for 317776727
+[2020-04-21 17:15:29,359 line 171] 317776727-Education:27 inserted in app_category table successfully
+[2020-04-21 17:15:29,362 line 171] 317776727-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:29,391 line 221] No ranking in top_countries
+[2020-04-21 17:15:29,419 line 221] No ranking in world
+[2020-04-21 17:15:29,420 line 174] 317776727: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:29,420 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:31,139 line 241] 943454788 row inserted in dev table
+[2020-04-21 17:15:31,139 line 246] Dev info ok
+[2020-04-21 17:15:31,153 line 151] 322680924: Data from main tab ok
+[2020-04-21 17:15:31,275 line 192] Top rankings ok
+[2020-04-21 17:15:32,455 line 275] Twitter information inserted in database for 322680924
+[2020-04-21 17:15:32,837 line 171] 322680924-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:15:32,841 line 171] 322680924-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:32,870 line 221] No ranking in top_countries
+[2020-04-21 17:15:32,900 line 221] No ranking in world
+[2020-04-21 17:15:32,900 line 174] 322680924: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:32,900 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:34,756 line 241] 331824387 row inserted in dev table
+[2020-04-21 17:15:34,756 line 246] Dev info ok
+[2020-04-21 17:15:34,769 line 151] 361225439: Data from main tab ok
+[2020-04-21 17:15:34,965 line 192] Top rankings ok
+[2020-04-21 17:15:36,542 line 275] Twitter information inserted in database for 361225439
+[2020-04-21 17:15:36,978 line 171] 361225439-Business:7 inserted in app_category table successfully
+[2020-04-21 17:15:36,982 line 171] 361225439-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:37,012 line 221] No ranking in top_countries
+[2020-04-21 17:15:37,043 line 221] No ranking in world
+[2020-04-21 17:15:37,043 line 174] 361225439: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:37,043 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:38,918 line 241] 295094305 row inserted in dev table
+[2020-04-21 17:15:38,918 line 246] Dev info ok
+[2020-04-21 17:15:38,933 line 151] 295094302: Data from main tab ok
+[2020-04-21 17:15:39,064 line 192] Top rankings ok
+[2020-04-21 17:15:40,621 line 275] Twitter information inserted in database for 295094302
+[2020-04-21 17:15:41,048 line 171] 295094302-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:41,098 line 221] No ranking in top_countries
+[2020-04-21 17:15:41,212 line 219] 295094302:world rankings ok
+[2020-04-21 17:15:41,212 line 174] 295094302: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:41,212 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:43,148 line 241] 758584971 row inserted in dev table
+[2020-04-21 17:15:43,148 line 246] Dev info ok
+[2020-04-21 17:15:43,161 line 151] 544031642: Data from main tab ok
+[2020-04-21 17:15:43,286 line 192] Top rankings ok
+[2020-04-21 17:15:44,261 line 275] Twitter information inserted in database for 544031642
+[2020-04-21 17:15:44,691 line 171] 544031642-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:15:44,695 line 171] 544031642-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:44,726 line 221] No ranking in top_countries
+[2020-04-21 17:15:44,896 line 219] 544031642:world rankings ok
+[2020-04-21 17:15:44,896 line 174] 544031642: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:44,896 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:46,047 line 245] Dev exist already
+[2020-04-21 17:15:46,047 line 246] Dev info ok
+[2020-04-21 17:15:46,063 line 151] 923801450: Data from main tab ok
+[2020-04-21 17:15:46,201 line 192] Top rankings ok
+[2020-04-21 17:15:47,798 line 275] Twitter information inserted in database for 923801450
+[2020-04-21 17:15:48,200 line 171] 923801450-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:15:48,203 line 171] 923801450-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:48,232 line 221] No ranking in top_countries
+[2020-04-21 17:15:48,262 line 221] No ranking in world
+[2020-04-21 17:15:48,262 line 174] 923801450: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:48,263 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:49,479 line 245] Dev exist already
+[2020-04-21 17:15:49,480 line 246] Dev info ok
+[2020-04-21 17:15:49,516 line 151] 356971775: Data from main tab ok
+[2020-04-21 17:15:49,822 line 192] Top rankings ok
+[2020-04-21 17:15:53,373 line 275] Twitter information inserted in database for 356971775
+[2020-04-21 17:15:53,773 line 171] 356971775-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:15:53,777 line 171] 356971775-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:53,830 line 221] No ranking in top_countries
+[2020-04-21 17:15:53,880 line 221] No ranking in world
+[2020-04-21 17:15:53,880 line 174] 356971775: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:53,881 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:55,710 line 241] 1187844945 row inserted in dev table
+[2020-04-21 17:15:55,711 line 246] Dev info ok
+[2020-04-21 17:15:55,723 line 151] 1172275338: Data from main tab ok
+[2020-04-21 17:15:55,874 line 192] Top rankings ok
+[2020-04-21 17:15:56,789 line 275] Twitter information inserted in database for 1172275338
+[2020-04-21 17:15:57,206 line 171] 1172275338-Books:29 inserted in app_category table successfully
+[2020-04-21 17:15:57,242 line 221] No ranking in top_countries
+[2020-04-21 17:15:57,276 line 221] No ranking in world
+[2020-04-21 17:15:57,276 line 174] 1172275338: row inserted in app_country_rank table 
+
+[2020-04-21 17:15:57,276 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:15:58,996 line 241] 487171194 row inserted in dev table
+[2020-04-21 17:15:58,996 line 246] Dev info ok
+[2020-04-21 17:15:59,002 line 86] No current rating
+[2020-04-21 17:15:59,007 line 151] 594789223: Data from main tab ok
+[2020-04-21 17:15:59,132 line 192] Top rankings ok
+[2020-04-21 17:16:00,039 line 275] Twitter information inserted in database for 594789223
+[2020-04-21 17:16:00,457 line 171] 594789223-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:00,487 line 221] No ranking in top_countries
+[2020-04-21 17:16:00,803 line 219] 594789223:world rankings ok
+[2020-04-21 17:16:00,803 line 174] 594789223: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:00,803 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:02,754 line 241] 807177219 row inserted in dev table
+[2020-04-21 17:16:02,755 line 246] Dev info ok
+[2020-04-21 17:16:02,759 line 124] No average rating on overall
+[2020-04-21 17:16:02,761 line 86] No current rating
+[2020-04-21 17:16:02,766 line 151] 814122594: Data from main tab ok
+[2020-04-21 17:16:02,935 line 192] Top rankings ok
+[2020-04-21 17:16:03,877 line 275] Twitter information inserted in database for 814122594
+[2020-04-21 17:16:04,276 line 171] 814122594-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:04,280 line 171] 814122594-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:04,312 line 221] No ranking in top_countries
+[2020-04-21 17:16:04,589 line 219] 814122594:world rankings ok
+[2020-04-21 17:16:04,590 line 174] 814122594: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:04,590 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:05,751 line 245] Dev exist already
+[2020-04-21 17:16:05,751 line 246] Dev info ok
+[2020-04-21 17:16:05,763 line 151] 807177216: Data from main tab ok
+[2020-04-21 17:16:05,918 line 192] Top rankings ok
+[2020-04-21 17:16:06,831 line 275] Twitter information inserted in database for 807177216
+[2020-04-21 17:16:07,225 line 171] 807177216-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:07,228 line 171] 807177216-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:07,260 line 221] No ranking in top_countries
+[2020-04-21 17:16:07,308 line 221] No ranking in world
+[2020-04-21 17:16:07,309 line 174] 807177216: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:07,309 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:08,655 line 245] Dev exist already
+[2020-04-21 17:16:08,655 line 246] Dev info ok
+[2020-04-21 17:16:08,670 line 151] 400366998: Data from main tab ok
+[2020-04-21 17:16:08,798 line 192] Top rankings ok
+[2020-04-21 17:16:09,801 line 275] Twitter information inserted in database for 400366998
+[2020-04-21 17:16:10,211 line 171] 400366998-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:10,214 line 171] 400366998-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:10,243 line 221] No ranking in top_countries
+[2020-04-21 17:16:10,274 line 221] No ranking in world
+[2020-04-21 17:16:10,274 line 174] 400366998: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:10,274 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:11,530 line 245] Dev exist already
+[2020-04-21 17:16:11,530 line 246] Dev info ok
+[2020-04-21 17:16:11,543 line 151] 572357798: Data from main tab ok
+[2020-04-21 17:16:11,824 line 192] Top rankings ok
+[2020-04-21 17:16:15,598 line 275] Twitter information inserted in database for 572357798
+[2020-04-21 17:16:16,028 line 171] 572357798-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:16,033 line 171] 572357798-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:16,068 line 221] No ranking in top_countries
+[2020-04-21 17:16:16,187 line 219] 572357798:world rankings ok
+[2020-04-21 17:16:16,188 line 174] 572357798: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:16,188 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:18,158 line 241] 439971125 row inserted in dev table
+[2020-04-21 17:16:18,158 line 246] Dev info ok
+[2020-04-21 17:16:18,163 line 124] No average rating on overall
+[2020-04-21 17:16:18,166 line 86] No current rating
+[2020-04-21 17:16:18,171 line 151] 446755408: Data from main tab ok
+[2020-04-21 17:16:18,345 line 192] Top rankings ok
+[2020-04-21 17:16:22,181 line 275] Twitter information inserted in database for 446755408
+[2020-04-21 17:16:22,567 line 171] 446755408-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:22,570 line 171] 446755408-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:22,599 line 221] No ranking in top_countries
+[2020-04-21 17:16:22,628 line 221] No ranking in world
+[2020-04-21 17:16:22,629 line 174] 446755408: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:22,629 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:23,842 line 245] Dev exist already
+[2020-04-21 17:16:23,842 line 246] Dev info ok
+[2020-04-21 17:16:23,859 line 151] 402969409: Data from main tab ok
+[2020-04-21 17:16:23,982 line 192] Top rankings ok
+[2020-04-21 17:16:24,945 line 275] Twitter information inserted in database for 402969409
+[2020-04-21 17:16:25,336 line 171] 402969409-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:25,339 line 171] 402969409-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:25,366 line 221] No ranking in top_countries
+[2020-04-21 17:16:25,394 line 221] No ranking in world
+[2020-04-21 17:16:25,394 line 174] 402969409: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:25,394 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:26,529 line 245] Dev exist already
+[2020-04-21 17:16:26,529 line 246] Dev info ok
+[2020-04-21 17:16:26,541 line 151] 1092838007: Data from main tab ok
+[2020-04-21 17:16:26,666 line 192] Top rankings ok
+[2020-04-21 17:16:27,575 line 275] Twitter information inserted in database for 1092838007
+[2020-04-21 17:16:27,961 line 171] 1092838007-Education:27 inserted in app_category table successfully
+[2020-04-21 17:16:27,965 line 171] 1092838007-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:27,992 line 221] No ranking in top_countries
+[2020-04-21 17:16:28,020 line 221] No ranking in world
+[2020-04-21 17:16:28,020 line 174] 1092838007: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:28,020 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:29,878 line 241] 364025324 row inserted in dev table
+[2020-04-21 17:16:29,879 line 246] Dev info ok
+[2020-04-21 17:16:29,890 line 151] 783080515: Data from main tab ok
+[2020-04-21 17:16:30,083 line 192] Top rankings ok
+[2020-04-21 17:16:31,071 line 275] Twitter information inserted in database for 783080515
+[2020-04-21 17:16:31,452 line 171] 783080515-Lifestyle:24 inserted in app_category table successfully
+[2020-04-21 17:16:31,456 line 171] 783080515-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:31,493 line 221] No ranking in top_countries
+[2020-04-21 17:16:31,530 line 221] No ranking in world
+[2020-04-21 17:16:31,530 line 174] 783080515: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:31,530 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:33,293 line 241] 466387404 row inserted in dev table
+[2020-04-21 17:16:33,293 line 246] Dev info ok
+[2020-04-21 17:16:33,309 line 151] 533851555: Data from main tab ok
+[2020-04-21 17:16:33,492 line 192] Top rankings ok
+[2020-04-21 17:16:34,510 line 275] Twitter information inserted in database for 533851555
+[2020-04-21 17:16:34,878 line 171] 533851555-Entertainment:28 inserted in app_category table successfully
+[2020-04-21 17:16:34,881 line 171] 533851555-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:34,912 line 221] No ranking in top_countries
+[2020-04-21 17:16:34,987 line 219] 533851555:world rankings ok
+[2020-04-21 17:16:34,987 line 174] 533851555: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:34,987 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:36,910 line 241] 315131575 row inserted in dev table
+[2020-04-21 17:16:36,910 line 246] Dev info ok
+[2020-04-21 17:16:36,914 line 124] No average rating on overall
+[2020-04-21 17:16:36,917 line 86] No current rating
+[2020-04-21 17:16:36,922 line 151] 371443255: Data from main tab ok
+[2020-04-21 17:16:37,069 line 192] Top rankings ok
+[2020-04-21 17:16:38,028 line 275] Twitter information inserted in database for 371443255
+[2020-04-21 17:16:38,553 line 171] 371443255-Education:27 inserted in app_category table successfully
+[2020-04-21 17:16:38,559 line 171] 371443255-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:38,614 line 221] No ranking in top_countries
+[2020-04-21 17:16:38,665 line 221] No ranking in world
+[2020-04-21 17:16:38,666 line 174] 371443255: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:38,666 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:39,888 line 245] Dev exist already
+[2020-04-21 17:16:39,889 line 246] Dev info ok
+[2020-04-21 17:16:39,909 line 151] 346447941: Data from main tab ok
+[2020-04-21 17:16:40,147 line 192] Top rankings ok
+[2020-04-21 17:16:43,948 line 275] Twitter information inserted in database for 346447941
+[2020-04-21 17:16:44,510 line 171] 346447941-Education:27 inserted in app_category table successfully
+[2020-04-21 17:16:44,516 line 171] 346447941-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:44,573 line 221] No ranking in top_countries
+[2020-04-21 17:16:44,620 line 221] No ranking in world
+[2020-04-21 17:16:44,620 line 174] 346447941: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:44,620 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:45,762 line 245] Dev exist already
+[2020-04-21 17:16:45,762 line 246] Dev info ok
+[2020-04-21 17:16:45,766 line 124] No average rating on overall
+[2020-04-21 17:16:45,768 line 86] No current rating
+[2020-04-21 17:16:45,773 line 151] 975173186: Data from main tab ok
+[2020-04-21 17:16:45,948 line 192] Top rankings ok
+[2020-04-21 17:16:46,882 line 275] Twitter information inserted in database for 975173186
+[2020-04-21 17:16:47,317 line 171] 975173186-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:47,358 line 221] No ranking in top_countries
+[2020-04-21 17:16:47,393 line 221] No ranking in world
+[2020-04-21 17:16:47,394 line 174] 975173186: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:47,394 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:49,302 line 241] 499556038 row inserted in dev table
+[2020-04-21 17:16:49,302 line 246] Dev info ok
+[2020-04-21 17:16:49,313 line 151] 705213293: Data from main tab ok
+[2020-04-21 17:16:49,431 line 192] Top rankings ok
+[2020-04-21 17:16:50,451 line 275] Twitter information inserted in database for 705213293
+[2020-04-21 17:16:51,028 line 171] 705213293-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:51,031 line 171] 705213293-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:51,061 line 221] No ranking in top_countries
+[2020-04-21 17:16:51,090 line 221] No ranking in world
+[2020-04-21 17:16:51,090 line 174] 705213293: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:51,090 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:52,956 line 241] 1111815657 row inserted in dev table
+[2020-04-21 17:16:52,956 line 246] Dev info ok
+[2020-04-21 17:16:52,969 line 151] 1111815658: Data from main tab ok
+[2020-04-21 17:16:53,091 line 192] Top rankings ok
+[2020-04-21 17:16:56,955 line 275] Twitter information inserted in database for 1111815658
+[2020-04-21 17:16:57,407 line 171] 1111815658-Reference:1 inserted in app_category table successfully
+[2020-04-21 17:16:57,412 line 171] 1111815658-Books:29 inserted in app_category table successfully
+[2020-04-21 17:16:57,443 line 221] No ranking in top_countries
+[2020-04-21 17:16:57,473 line 221] No ranking in world
+[2020-04-21 17:16:57,473 line 174] 1111815658: row inserted in app_country_rank table 
+
+[2020-04-21 17:16:57,473 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:16:59,303 line 241] 477697516 row inserted in dev table
+[2020-04-21 17:16:59,303 line 246] Dev info ok
+[2020-04-21 17:16:59,307 line 124] No average rating on overall
+[2020-04-21 17:16:59,309 line 86] No current rating
+[2020-04-21 17:16:59,315 line 151] 777943593: Data from main tab ok
+[2020-04-21 17:16:59,440 line 192] Top rankings ok
+[2020-04-21 17:17:00,360 line 275] Twitter information inserted in database for 777943593
+[2020-04-21 17:17:00,755 line 171] 777943593-Education:27 inserted in app_category table successfully
+[2020-04-21 17:17:00,758 line 171] 777943593-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:00,786 line 221] No ranking in top_countries
+[2020-04-21 17:17:00,815 line 221] No ranking in world
+[2020-04-21 17:17:00,815 line 174] 777943593: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:00,815 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:02,632 line 241] 297539595 row inserted in dev table
+[2020-04-21 17:17:02,632 line 246] Dev info ok
+[2020-04-21 17:17:02,641 line 86] No current rating
+[2020-04-21 17:17:02,649 line 151] 418102178: Data from main tab ok
+[2020-04-21 17:17:02,769 line 192] Top rankings ok
+[2020-04-21 17:17:03,660 line 275] Twitter information inserted in database for 418102178
+[2020-04-21 17:17:04,045 line 171] 418102178-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:17:04,048 line 171] 418102178-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:04,078 line 221] No ranking in top_countries
+[2020-04-21 17:17:04,106 line 221] No ranking in world
+[2020-04-21 17:17:04,106 line 174] 418102178: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:04,106 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:05,139 line 245] Dev exist already
+[2020-04-21 17:17:05,140 line 246] Dev info ok
+[2020-04-21 17:17:05,143 line 124] No average rating on overall
+[2020-04-21 17:17:05,145 line 86] No current rating
+[2020-04-21 17:17:05,149 line 151] 375355407: Data from main tab ok
+[2020-04-21 17:17:05,277 line 192] Top rankings ok
+[2020-04-21 17:17:08,910 line 275] Twitter information inserted in database for 375355407
+[2020-04-21 17:17:09,283 line 171] 375355407-Education:27 inserted in app_category table successfully
+[2020-04-21 17:17:09,286 line 171] 375355407-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:09,315 line 221] No ranking in top_countries
+[2020-04-21 17:17:09,343 line 221] No ranking in world
+[2020-04-21 17:17:09,343 line 174] 375355407: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:09,343 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:10,455 line 245] Dev exist already
+[2020-04-21 17:17:10,455 line 246] Dev info ok
+[2020-04-21 17:17:10,458 line 124] No average rating on overall
+[2020-04-21 17:17:10,460 line 86] No current rating
+[2020-04-21 17:17:10,464 line 151] 446761455: Data from main tab ok
+[2020-04-21 17:17:10,590 line 192] Top rankings ok
+[2020-04-21 17:17:16,975 line 275] Twitter information inserted in database for 446761455
+[2020-04-21 17:17:17,347 line 171] 446761455-Education:27 inserted in app_category table successfully
+[2020-04-21 17:17:17,350 line 171] 446761455-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:17,380 line 221] No ranking in top_countries
+[2020-04-21 17:17:17,409 line 221] No ranking in world
+[2020-04-21 17:17:17,409 line 174] 446761455: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:17,409 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:19,176 line 241] 436985015 row inserted in dev table
+[2020-04-21 17:17:19,176 line 246] Dev info ok
+[2020-04-21 17:17:19,195 line 151] 497318973: Data from main tab ok
+[2020-04-21 17:17:19,344 line 192] Top rankings ok
+[2020-04-21 17:17:20,364 line 275] Twitter information inserted in database for 497318973
+[2020-04-21 17:17:20,911 line 171] 497318973-Lifestyle:24 inserted in app_category table successfully
+[2020-04-21 17:17:20,915 line 171] 497318973-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:20,944 line 221] No ranking in top_countries
+[2020-04-21 17:17:20,972 line 221] No ranking in world
+[2020-04-21 17:17:20,972 line 174] 497318973: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:20,972 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:22,685 line 241] 1003715057 row inserted in dev table
+[2020-04-21 17:17:22,685 line 246] Dev info ok
+[2020-04-21 17:17:22,689 line 124] No average rating on overall
+[2020-04-21 17:17:22,691 line 86] No current rating
+[2020-04-21 17:17:22,695 line 151] 1166963098: Data from main tab ok
+[2020-04-21 17:17:22,816 line 192] Top rankings ok
+[2020-04-21 17:17:23,695 line 275] Twitter information inserted in database for 1166963098
+[2020-04-21 17:17:24,114 line 171] 1166963098-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:17:24,119 line 171] 1166963098-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:24,149 line 221] No ranking in top_countries
+[2020-04-21 17:17:24,212 line 219] 1166963098:world rankings ok
+[2020-04-21 17:17:24,212 line 174] 1166963098: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:24,213 line 69] Scrapping in: Belize/Books/paid
+[2020-04-21 17:17:26,104 line 241] 511567256 row inserted in dev table
+[2020-04-21 17:17:26,104 line 246] Dev info ok
+[2020-04-21 17:17:26,107 line 124] No average rating on overall
+[2020-04-21 17:17:26,109 line 86] No current rating
+[2020-04-21 17:17:26,114 line 151] 583597981: Data from main tab ok
+[2020-04-21 17:17:26,242 line 192] Top rankings ok
+[2020-04-21 17:17:27,333 line 275] Twitter information inserted in database for 583597981
+[2020-04-21 17:17:27,747 line 171] 583597981-Entertainment:28 inserted in app_category table successfully
+[2020-04-21 17:17:27,750 line 171] 583597981-Books:29 inserted in app_category table successfully
+[2020-04-21 17:17:27,778 line 221] No ranking in top_countries
+[2020-04-21 17:17:27,806 line 221] No ranking in world
+[2020-04-21 17:17:27,806 line 174] 583597981: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:28,684 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:17:30,635 line 241] 530594111 row inserted in dev table
+[2020-04-21 17:17:30,635 line 246] Dev info ok
+[2020-04-21 17:17:30,656 line 151] 546505307: Data from main tab ok
+[2020-04-21 17:17:30,773 line 192] Top rankings ok
+[2020-04-21 17:17:34,406 line 275] Twitter information inserted in database for 546505307
+[2020-04-21 17:17:34,829 line 171] 546505307-Business:7 inserted in app_category table successfully
+[2020-04-21 17:17:34,834 line 171] 546505307-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:17:35,395 line 219] 546505307:top_countries rankings ok
+[2020-04-21 17:17:43,255 line 219] 546505307:world rankings ok
+[2020-04-21 17:17:43,256 line 174] 546505307: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:43,256 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:17:45,293 line 241] 288429043 row inserted in dev table
+[2020-04-21 17:17:45,293 line 246] Dev info ok
+[2020-04-21 17:17:45,337 line 151] 288429040: Data from main tab ok
+[2020-04-21 17:17:45,484 line 192] Top rankings ok
+[2020-04-21 17:17:46,527 line 275] Twitter information inserted in database for 288429040
+[2020-04-21 17:17:46,972 line 171] 288429040-Business:7 inserted in app_category table successfully
+[2020-04-21 17:17:47,179 line 219] 288429040:top_countries rankings ok
+[2020-04-21 17:17:48,979 line 219] 288429040:world rankings ok
+[2020-04-21 17:17:48,980 line 174] 288429040: row inserted in app_country_rank table 
+
+[2020-04-21 17:17:48,980 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:17:50,844 line 241] 298856275 row inserted in dev table
+[2020-04-21 17:17:50,844 line 246] Dev info ok
+[2020-04-21 17:17:50,864 line 151] 1113153706: Data from main tab ok
+[2020-04-21 17:17:51,007 line 192] Top rankings ok
+[2020-04-21 17:17:55,293 line 275] Twitter information inserted in database for 1113153706
+[2020-04-21 17:17:55,679 line 171] 1113153706-Business:7 inserted in app_category table successfully
+[2020-04-21 17:17:55,682 line 171] 1113153706-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:17:56,726 line 219] 1113153706:top_countries rankings ok
+[2020-04-21 17:18:03,858 line 219] 1113153706:world rankings ok
+[2020-04-21 17:18:03,858 line 174] 1113153706: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:03,858 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:06,357 line 241] 331646274 row inserted in dev table
+[2020-04-21 17:18:06,363 line 246] Dev info ok
+[2020-04-21 17:18:06,400 line 151] 469337564: Data from main tab ok
+[2020-04-21 17:18:06,560 line 192] Top rankings ok
+[2020-04-21 17:18:09,045 line 275] Twitter information inserted in database for 469337564
+[2020-04-21 17:18:09,568 line 171] 469337564-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:09,572 line 171] 469337564-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:09,833 line 219] 469337564:top_countries rankings ok
+[2020-04-21 17:18:12,766 line 219] 469337564:world rankings ok
+[2020-04-21 17:18:12,767 line 174] 469337564: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:12,767 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:15,112 line 241] 281956209 row inserted in dev table
+[2020-04-21 17:18:15,113 line 246] Dev info ok
+[2020-04-21 17:18:15,326 line 151] 1013231476: Data from main tab ok
+[2020-04-21 17:18:15,564 line 192] Top rankings ok
+[2020-04-21 17:18:19,320 line 275] Twitter information inserted in database for 1013231476
+[2020-04-21 17:18:19,730 line 171] 1013231476-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:19,736 line 171] 1013231476-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:20,470 line 219] 1013231476:top_countries rankings ok
+[2020-04-21 17:18:26,088 line 219] 1013231476:world rankings ok
+[2020-04-21 17:18:26,088 line 174] 1013231476: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:26,088 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:28,267 line 241] 1473276099 row inserted in dev table
+[2020-04-21 17:18:28,268 line 246] Dev info ok
+[2020-04-21 17:18:28,289 line 151] 1040149161: Data from main tab ok
+[2020-04-21 17:18:28,495 line 192] Top rankings ok
+[2020-04-21 17:18:29,508 line 275] Twitter information inserted in database for 1040149161
+[2020-04-21 17:18:29,953 line 171] 1040149161-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:29,956 line 171] 1040149161-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:30,011 line 221] No ranking in top_countries
+[2020-04-21 17:18:33,581 line 219] 1040149161:world rankings ok
+[2020-04-21 17:18:33,582 line 174] 1040149161: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:33,582 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:35,474 line 241] 1085442365 row inserted in dev table
+[2020-04-21 17:18:35,474 line 246] Dev info ok
+[2020-04-21 17:18:35,489 line 151] 1040093707: Data from main tab ok
+[2020-04-21 17:18:35,659 line 192] Top rankings ok
+[2020-04-21 17:18:37,105 line 275] Twitter information inserted in database for 1040093707
+[2020-04-21 17:18:37,512 line 171] 1040093707-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:37,516 line 171] 1040093707-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:37,553 line 221] No ranking in top_countries
+[2020-04-21 17:18:39,087 line 219] 1040093707:world rankings ok
+[2020-04-21 17:18:39,087 line 174] 1040093707: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:39,087 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:41,208 line 241] 749046894 row inserted in dev table
+[2020-04-21 17:18:41,208 line 246] Dev info ok
+[2020-04-21 17:18:41,224 line 151] 1017261655: Data from main tab ok
+[2020-04-21 17:18:41,426 line 192] Top rankings ok
+[2020-04-21 17:18:42,430 line 275] Twitter information inserted in database for 1017261655
+[2020-04-21 17:18:42,843 line 171] 1017261655-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:18:42,848 line 171] 1017261655-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:42,886 line 221] No ranking in top_countries
+[2020-04-21 17:18:42,922 line 221] No ranking in world
+[2020-04-21 17:18:42,923 line 174] 1017261655: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:42,923 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:44,852 line 241] 298844389 row inserted in dev table
+[2020-04-21 17:18:44,852 line 246] Dev info ok
+[2020-04-21 17:18:44,873 line 151] 298844386: Data from main tab ok
+[2020-04-21 17:18:45,010 line 192] Top rankings ok
+[2020-04-21 17:18:48,983 line 275] Twitter information inserted in database for 298844386
+[2020-04-21 17:18:49,390 line 171] 298844386-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:49,393 line 171] 298844386-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:49,618 line 219] 298844386:top_countries rankings ok
+[2020-04-21 17:18:52,280 line 219] 298844386:world rankings ok
+[2020-04-21 17:18:52,280 line 174] 298844386: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:52,280 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:54,584 line 241] 289579214 row inserted in dev table
+[2020-04-21 17:18:54,584 line 246] Dev info ok
+[2020-04-21 17:18:54,606 line 151] 924005506: Data from main tab ok
+[2020-04-21 17:18:54,736 line 192] Top rankings ok
+[2020-04-21 17:18:55,669 line 275] Twitter information inserted in database for 924005506
+[2020-04-21 17:18:56,055 line 171] 924005506-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:56,058 line 171] 924005506-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:56,095 line 221] No ranking in top_countries
+[2020-04-21 17:18:56,133 line 221] No ranking in world
+[2020-04-21 17:18:56,133 line 174] 924005506: row inserted in app_country_rank table 
+
+[2020-04-21 17:18:56,133 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:18:57,338 line 245] Dev exist already
+[2020-04-21 17:18:57,338 line 246] Dev info ok
+[2020-04-21 17:18:57,368 line 151] 1199564834: Data from main tab ok
+[2020-04-21 17:18:57,566 line 192] Top rankings ok
+[2020-04-21 17:18:59,457 line 275] Twitter information inserted in database for 1199564834
+[2020-04-21 17:18:59,938 line 171] 1199564834-Business:7 inserted in app_category table successfully
+[2020-04-21 17:18:59,946 line 171] 1199564834-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:18:59,994 line 221] No ranking in top_countries
+[2020-04-21 17:19:00,167 line 219] 1199564834:world rankings ok
+[2020-04-21 17:19:00,167 line 174] 1199564834: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:00,167 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:02,040 line 241] 760100924 row inserted in dev table
+[2020-04-21 17:19:02,040 line 246] Dev info ok
+[2020-04-21 17:19:02,058 line 151] 595563753: Data from main tab ok
+[2020-04-21 17:19:02,191 line 192] Top rankings ok
+[2020-04-21 17:19:03,672 line 275] Twitter information inserted in database for 595563753
+[2020-04-21 17:19:04,113 line 171] 595563753-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:04,150 line 221] No ranking in top_countries
+[2020-04-21 17:19:04,180 line 221] No ranking in world
+[2020-04-21 17:19:04,181 line 174] 595563753: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:04,181 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:05,480 line 245] Dev exist already
+[2020-04-21 17:19:05,480 line 246] Dev info ok
+[2020-04-21 17:19:05,511 line 151] 605841731: Data from main tab ok
+[2020-04-21 17:19:05,651 line 192] Top rankings ok
+[2020-04-21 17:19:09,234 line 275] Twitter information inserted in database for 605841731
+[2020-04-21 17:19:09,641 line 171] 605841731-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:09,644 line 171] 605841731-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:19:09,678 line 221] No ranking in top_countries
+[2020-04-21 17:19:09,833 line 219] 605841731:world rankings ok
+[2020-04-21 17:19:09,833 line 174] 605841731: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:09,833 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:11,881 line 241] 381786510 row inserted in dev table
+[2020-04-21 17:19:11,881 line 246] Dev info ok
+[2020-04-21 17:19:11,912 line 151] 381786507: Data from main tab ok
+[2020-04-21 17:19:12,050 line 192] Top rankings ok
+[2020-04-21 17:19:12,962 line 275] Twitter information inserted in database for 381786507
+[2020-04-21 17:19:13,366 line 171] 381786507-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:13,372 line 171] 381786507-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:19:13,412 line 221] No ranking in top_countries
+[2020-04-21 17:19:13,446 line 221] No ranking in world
+[2020-04-21 17:19:13,446 line 174] 381786507: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:13,446 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:15,310 line 241] 327081988 row inserted in dev table
+[2020-04-21 17:19:15,310 line 246] Dev info ok
+[2020-04-21 17:19:15,326 line 151] 989920057: Data from main tab ok
+[2020-04-21 17:19:15,464 line 192] Top rankings ok
+[2020-04-21 17:19:16,399 line 275] Twitter information inserted in database for 989920057
+[2020-04-21 17:19:17,046 line 171] 989920057-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:19:17,049 line 171] 989920057-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:17,077 line 221] No ranking in top_countries
+[2020-04-21 17:19:17,106 line 221] No ranking in world
+[2020-04-21 17:19:17,106 line 174] 989920057: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:17,106 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:18,881 line 241] 1231145899 row inserted in dev table
+[2020-04-21 17:19:18,881 line 246] Dev info ok
+[2020-04-21 17:19:18,903 line 151] 1314963982: Data from main tab ok
+[2020-04-21 17:19:19,071 line 192] Top rankings ok
+[2020-04-21 17:19:20,890 line 275] Twitter information inserted in database for 1314963982
+[2020-04-21 17:19:21,286 line 171] 1314963982-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:19:21,289 line 171] 1314963982-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:21,323 line 221] No ranking in top_countries
+[2020-04-21 17:19:21,792 line 219] 1314963982:world rankings ok
+[2020-04-21 17:19:21,792 line 174] 1314963982: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:21,793 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:23,856 line 241] 436672032 row inserted in dev table
+[2020-04-21 17:19:23,856 line 246] Dev info ok
+[2020-04-21 17:19:23,907 line 151] 503451073: Data from main tab ok
+[2020-04-21 17:19:24,152 line 192] Top rankings ok
+[2020-04-21 17:19:25,206 line 275] Twitter information inserted in database for 503451073
+[2020-04-21 17:19:25,619 line 171] 503451073-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:25,623 line 171] 503451073-Shopping:84 inserted in app_category table successfully
+[2020-04-21 17:19:25,658 line 221] No ranking in top_countries
+[2020-04-21 17:19:26,218 line 219] 503451073:world rankings ok
+[2020-04-21 17:19:26,218 line 174] 503451073: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:26,218 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:28,026 line 241] 570748343 row inserted in dev table
+[2020-04-21 17:19:28,026 line 246] Dev info ok
+[2020-04-21 17:19:28,041 line 151] 492342639: Data from main tab ok
+[2020-04-21 17:19:28,228 line 192] Top rankings ok
+[2020-04-21 17:19:29,288 line 275] Twitter information inserted in database for 492342639
+[2020-04-21 17:19:29,684 line 171] 492342639-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:29,688 line 171] 492342639-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:19:29,719 line 221] No ranking in top_countries
+[2020-04-21 17:19:29,753 line 221] No ranking in world
+[2020-04-21 17:19:29,753 line 174] 492342639: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:29,754 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:31,689 line 241] 1447098962 row inserted in dev table
+[2020-04-21 17:19:31,689 line 246] Dev info ok
+[2020-04-21 17:19:31,705 line 151] 1447098963: Data from main tab ok
+[2020-04-21 17:19:31,854 line 192] Top rankings ok
+[2020-04-21 17:19:33,315 line 275] Twitter information inserted in database for 1447098963
+[2020-04-21 17:19:33,728 line 171] 1447098963-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:19:33,730 line 171] 1447098963-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:33,760 line 221] No ranking in top_countries
+[2020-04-21 17:19:35,295 line 219] 1447098963:world rankings ok
+[2020-04-21 17:19:35,295 line 174] 1447098963: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:35,296 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:36,996 line 241] 662978333 row inserted in dev table
+[2020-04-21 17:19:36,996 line 246] Dev info ok
+[2020-04-21 17:19:37,026 line 151] 461504587: Data from main tab ok
+[2020-04-21 17:19:37,167 line 192] Top rankings ok
+[2020-04-21 17:19:38,883 line 275] Twitter information inserted in database for 461504587
+[2020-04-21 17:19:39,268 line 171] 461504587-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:39,272 line 171] 461504587-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:19:39,302 line 221] No ranking in top_countries
+[2020-04-21 17:19:39,335 line 221] No ranking in world
+[2020-04-21 17:19:39,335 line 174] 461504587: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:39,336 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:41,435 line 241] 284882218 row inserted in dev table
+[2020-04-21 17:19:41,435 line 246] Dev info ok
+[2020-04-21 17:19:41,467 line 151] 514643583: Data from main tab ok
+[2020-04-21 17:19:41,606 line 192] Top rankings ok
+[2020-04-21 17:19:43,880 line 275] Twitter information inserted in database for 514643583
+[2020-04-21 17:19:44,285 line 171] 514643583-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:44,289 line 171] 514643583-Social Networking:4 inserted in app_category table successfully
+[2020-04-21 17:19:44,445 line 221] No ranking in top_countries
+[2020-04-21 17:19:44,779 line 219] 514643583:world rankings ok
+[2020-04-21 17:19:44,779 line 174] 514643583: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:44,779 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:45,917 line 245] Dev exist already
+[2020-04-21 17:19:45,917 line 246] Dev info ok
+[2020-04-21 17:19:45,930 line 151] 1413092345: Data from main tab ok
+[2020-04-21 17:19:46,077 line 192] Top rankings ok
+[2020-04-21 17:19:47,782 line 275] Twitter information inserted in database for 1413092345
+[2020-04-21 17:19:48,171 line 171] 1413092345-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:19:48,175 line 171] 1413092345-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:48,204 line 221] No ranking in top_countries
+[2020-04-21 17:19:49,076 line 219] 1413092345:world rankings ok
+[2020-04-21 17:19:49,076 line 174] 1413092345: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:49,077 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:50,889 line 241] 310634000 row inserted in dev table
+[2020-04-21 17:19:50,890 line 246] Dev info ok
+[2020-04-21 17:19:50,903 line 151] 1386412985: Data from main tab ok
+[2020-04-21 17:19:51,036 line 192] Top rankings ok
+[2020-04-21 17:19:54,707 line 275] Twitter information inserted in database for 1386412985
+[2020-04-21 17:19:55,090 line 171] 1386412985-Business:7 inserted in app_category table successfully
+[2020-04-21 17:19:55,093 line 171] 1386412985-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:19:55,123 line 221] No ranking in top_countries
+[2020-04-21 17:19:58,387 line 219] 1386412985:world rankings ok
+[2020-04-21 17:19:58,388 line 174] 1386412985: row inserted in app_country_rank table 
+
+[2020-04-21 17:19:58,388 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:19:59,546 line 245] Dev exist already
+[2020-04-21 17:19:59,546 line 246] Dev info ok
+[2020-04-21 17:19:59,559 line 151] 1462818858: Data from main tab ok
+[2020-04-21 17:19:59,742 line 192] Top rankings ok
+[2020-04-21 17:20:01,282 line 275] Twitter information inserted in database for 1462818858
+[2020-04-21 17:20:01,675 line 171] 1462818858-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:01,679 line 171] 1462818858-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:01,713 line 221] No ranking in top_countries
+[2020-04-21 17:20:01,945 line 219] 1462818858:world rankings ok
+[2020-04-21 17:20:01,945 line 174] 1462818858: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:01,945 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:03,722 line 241] 1449023066 row inserted in dev table
+[2020-04-21 17:20:03,722 line 246] Dev info ok
+[2020-04-21 17:20:03,734 line 151] 1449023197: Data from main tab ok
+[2020-04-21 17:20:03,861 line 192] Top rankings ok
+[2020-04-21 17:20:04,777 line 275] Twitter information inserted in database for 1449023197
+[2020-04-21 17:20:05,174 line 171] 1449023197-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:20:05,177 line 171] 1449023197-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:05,205 line 221] No ranking in top_countries
+[2020-04-21 17:20:05,763 line 219] 1449023197:world rankings ok
+[2020-04-21 17:20:05,763 line 174] 1449023197: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:05,763 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:07,621 line 241] 299616804 row inserted in dev table
+[2020-04-21 17:20:07,621 line 246] Dev info ok
+[2020-04-21 17:20:07,638 line 151] 1244921300: Data from main tab ok
+[2020-04-21 17:20:07,768 line 192] Top rankings ok
+[2020-04-21 17:20:11,709 line 275] Twitter information inserted in database for 1244921300
+[2020-04-21 17:20:12,217 line 171] 1244921300-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:12,221 line 171] 1244921300-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:12,250 line 221] No ranking in top_countries
+[2020-04-21 17:20:12,427 line 219] 1244921300:world rankings ok
+[2020-04-21 17:20:12,427 line 174] 1244921300: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:12,427 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:13,755 line 245] Dev exist already
+[2020-04-21 17:20:13,755 line 246] Dev info ok
+[2020-04-21 17:20:13,769 line 151] 1239774423: Data from main tab ok
+[2020-04-21 17:20:13,903 line 192] Top rankings ok
+[2020-04-21 17:20:17,441 line 275] Twitter information inserted in database for 1239774423
+[2020-04-21 17:20:17,852 line 171] 1239774423-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:17,855 line 171] 1239774423-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:17,883 line 221] No ranking in top_countries
+[2020-04-21 17:20:18,094 line 219] 1239774423:world rankings ok
+[2020-04-21 17:20:18,095 line 174] 1239774423: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:18,095 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:19,836 line 241] 718353904 row inserted in dev table
+[2020-04-21 17:20:19,836 line 246] Dev info ok
+[2020-04-21 17:20:19,856 line 151] 1382564905: Data from main tab ok
+[2020-04-21 17:20:20,032 line 192] Top rankings ok
+[2020-04-21 17:20:21,481 line 275] Twitter information inserted in database for 1382564905
+[2020-04-21 17:20:21,901 line 171] 1382564905-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:21,905 line 171] 1382564905-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:21,933 line 221] No ranking in top_countries
+[2020-04-21 17:20:21,961 line 221] No ranking in world
+[2020-04-21 17:20:21,962 line 174] 1382564905: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:21,962 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:23,722 line 241] 453420243 row inserted in dev table
+[2020-04-21 17:20:23,722 line 246] Dev info ok
+[2020-04-21 17:20:23,750 line 151] 618783545: Data from main tab ok
+[2020-04-21 17:20:23,873 line 192] Top rankings ok
+[2020-04-21 17:20:27,824 line 275] Twitter information inserted in database for 618783545
+[2020-04-21 17:20:28,225 line 171] 618783545-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:28,229 line 171] 618783545-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:28,256 line 221] No ranking in top_countries
+[2020-04-21 17:20:28,284 line 221] No ranking in world
+[2020-04-21 17:20:28,284 line 174] 618783545: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:28,284 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:30,294 line 241] 290853825 row inserted in dev table
+[2020-04-21 17:20:30,294 line 246] Dev info ok
+[2020-04-21 17:20:30,316 line 151] 290853822: Data from main tab ok
+[2020-04-21 17:20:30,439 line 192] Top rankings ok
+[2020-04-21 17:20:31,944 line 275] Twitter information inserted in database for 290853822
+[2020-04-21 17:20:32,384 line 171] 290853822-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:32,387 line 171] 290853822-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:32,430 line 221] No ranking in top_countries
+[2020-04-21 17:20:32,467 line 221] No ranking in world
+[2020-04-21 17:20:32,468 line 174] 290853822: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:32,468 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:34,412 line 241] 1097304866 row inserted in dev table
+[2020-04-21 17:20:34,413 line 246] Dev info ok
+[2020-04-21 17:20:34,435 line 151] 1166474681: Data from main tab ok
+[2020-04-21 17:20:34,586 line 192] Top rankings ok
+[2020-04-21 17:20:35,536 line 275] Twitter information inserted in database for 1166474681
+[2020-04-21 17:20:35,996 line 171] 1166474681-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:20:35,999 line 171] 1166474681-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:36,033 line 221] No ranking in top_countries
+[2020-04-21 17:20:36,108 line 219] 1166474681:world rankings ok
+[2020-04-21 17:20:36,108 line 174] 1166474681: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:36,110 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:37,884 line 241] 766315915 row inserted in dev table
+[2020-04-21 17:20:37,884 line 246] Dev info ok
+[2020-04-21 17:20:37,896 line 151] 1198164893: Data from main tab ok
+[2020-04-21 17:20:38,083 line 192] Top rankings ok
+[2020-04-21 17:20:39,008 line 275] Twitter information inserted in database for 1198164893
+[2020-04-21 17:20:39,397 line 171] 1198164893-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:39,400 line 171] 1198164893-Photo & Video:9 inserted in app_category table successfully
+[2020-04-21 17:20:39,436 line 221] No ranking in top_countries
+[2020-04-21 17:20:39,471 line 221] No ranking in world
+[2020-04-21 17:20:39,471 line 174] 1198164893: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:39,471 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:40,628 line 245] Dev exist already
+[2020-04-21 17:20:40,629 line 246] Dev info ok
+[2020-04-21 17:20:40,644 line 151] 950099951: Data from main tab ok
+[2020-04-21 17:20:40,841 line 192] Top rankings ok
+[2020-04-21 17:20:42,585 line 275] Twitter information inserted in database for 950099951
+[2020-04-21 17:20:43,065 line 171] 950099951-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:43,069 line 171] 950099951-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:43,097 line 221] No ranking in top_countries
+[2020-04-21 17:20:43,260 line 219] 950099951:world rankings ok
+[2020-04-21 17:20:43,260 line 174] 950099951: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:43,260 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:45,067 line 241] 413163561 row inserted in dev table
+[2020-04-21 17:20:45,068 line 246] Dev info ok
+[2020-04-21 17:20:45,087 line 151] 422663827: Data from main tab ok
+[2020-04-21 17:20:45,264 line 192] Top rankings ok
+[2020-04-21 17:20:49,199 line 275] Twitter information inserted in database for 422663827
+[2020-04-21 17:20:49,617 line 171] 422663827-Utilities:5 inserted in app_category table successfully
+[2020-04-21 17:20:49,620 line 171] 422663827-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:49,651 line 221] No ranking in top_countries
+[2020-04-21 17:20:49,680 line 221] No ranking in world
+[2020-04-21 17:20:49,680 line 174] 422663827: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:49,680 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:50,936 line 245] Dev exist already
+[2020-04-21 17:20:50,936 line 246] Dev info ok
+[2020-04-21 17:20:50,948 line 151] 917418728: Data from main tab ok
+[2020-04-21 17:20:51,084 line 192] Top rankings ok
+[2020-04-21 17:20:54,424 line 275] Twitter information inserted in database for 917418728
+[2020-04-21 17:20:54,817 line 171] 917418728-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:54,820 line 171] 917418728-Education:27 inserted in app_category table successfully
+[2020-04-21 17:20:54,849 line 221] No ranking in top_countries
+[2020-04-21 17:20:54,916 line 219] 917418728:world rankings ok
+[2020-04-21 17:20:54,917 line 174] 917418728: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:54,917 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:20:56,756 line 241] 524933495 row inserted in dev table
+[2020-04-21 17:20:56,757 line 246] Dev info ok
+[2020-04-21 17:20:56,773 line 151] 684119875: Data from main tab ok
+[2020-04-21 17:20:56,909 line 192] Top rankings ok
+[2020-04-21 17:20:58,369 line 275] Twitter information inserted in database for 684119875
+[2020-04-21 17:20:58,768 line 171] 684119875-Business:7 inserted in app_category table successfully
+[2020-04-21 17:20:58,772 line 171] 684119875-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:20:58,801 line 221] No ranking in top_countries
+[2020-04-21 17:20:58,831 line 221] No ranking in world
+[2020-04-21 17:20:58,831 line 174] 684119875: row inserted in app_country_rank table 
+
+[2020-04-21 17:20:58,831 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:21:00,593 line 241] 295726257 row inserted in dev table
+[2020-04-21 17:21:00,593 line 246] Dev info ok
+[2020-04-21 17:21:00,609 line 151] 306273816: Data from main tab ok
+[2020-04-21 17:21:00,728 line 192] Top rankings ok
+[2020-04-21 17:21:03,026 line 275] Twitter information inserted in database for 306273816
+[2020-04-21 17:21:03,417 line 171] 306273816-Business:7 inserted in app_category table successfully
+[2020-04-21 17:21:03,421 line 171] 306273816-Productivity:2 inserted in app_category table successfully
+[2020-04-21 17:21:03,451 line 221] No ranking in top_countries
+[2020-04-21 17:21:03,480 line 221] No ranking in world
+[2020-04-21 17:21:03,480 line 174] 306273816: row inserted in app_country_rank table 
+
+[2020-04-21 17:21:03,480 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:21:04,690 line 245] Dev exist already
+[2020-04-21 17:21:04,690 line 246] Dev info ok
+[2020-04-21 17:21:04,720 line 151] 944921229: Data from main tab ok
+[2020-04-21 17:21:04,849 line 192] Top rankings ok
+[2020-04-21 17:21:08,648 line 275] Twitter information inserted in database for 944921229
+[2020-04-21 17:21:09,064 line 171] 944921229-Business:7 inserted in app_category table successfully
+[2020-04-21 17:21:09,067 line 171] 944921229-Social Networking:4 inserted in app_category table successfully
+[2020-04-21 17:21:09,096 line 221] No ranking in top_countries
+[2020-04-21 17:21:09,124 line 221] No ranking in world
+[2020-04-21 17:21:09,124 line 174] 944921229: row inserted in app_country_rank table 
+
+[2020-04-21 17:21:09,125 line 69] Scrapping in: Belize/Business/free
+[2020-04-21 17:21:10,343 line 245] Dev exist already
+[2020-04-21 17:21:10,343 line 246] Dev info ok
+[2020-04-21 17:21:10,372 line 151] 964397083: Data from main tab ok
+[2020-04-21 17:21:10,509 line 192] Top rankings ok
