@@ -22,7 +22,7 @@ parser_scrap.add_argument('-i', '--id', nargs='+', metavar='', type=int,
 
 args = parser_scrap.parse_args()
 
-password = input('Please insert your mysql password:' + '\n')
+password = ''
 
 
 def main():

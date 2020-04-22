@@ -179,7 +179,7 @@ def insert_data_app(id_tag, dictionary_categories, dictionary_countries, driver)
 
 
 def main():
-    sql_password = input('Please insert your mysql password:' + '\n')
+    sql_password = ''
     create_database(sql_password, 'apptrace')
 
 
