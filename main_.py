@@ -30,7 +30,7 @@ password = ''
 def main():
     global password
     # sq.create_database(password, 'apptrace')
-    driver = webdriver.Firefox(executable_path='/Users/moriahzur/Downloads/geckodriver')
+    driver = webdriver.Firefox(executable_path=r'./geckodriver')
     #driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     dictionary_categories = col.get_category_dic()
     # insert into the table 'category' the id and the name of the categories
