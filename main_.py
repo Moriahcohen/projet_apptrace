@@ -3,7 +3,9 @@ import logging
 import argparse
 import sql_ as sq
 import collect_ as col
-
+from selenium import webdriver
+from selenium.webdriver import Firefox
+from selenium.webdriver.firefox.options import Options
 
 logger = logging.getLogger(__name__)
 format_logger = '[%(asctime)s line %(lineno)d] %(message)s'
@@ -22,13 +24,14 @@ parser_scrap.add_argument('-i', '--id', nargs='+', metavar='', type=int,
 
 args = parser_scrap.parse_args()
 
-password = input('Please insert your mysql password:' + '\n')
+password = ''
 
 
 def main():
     global password
     # sq.create_database(password, 'apptrace')
-    driver = Chrome()
+    driver = webdriver.Firefox(executable_path='/Users/moriahzur/Downloads/geckodriver')
+    #driver = Chrome('/Users/moriahzur/project1/projet_apptrace/chromedriver')
     dictionary_categories = col.get_category_dic()
     # insert into the table 'category' the id and the name of the categories
     query = "INSERT INTO category(id, category) VALUES (%s,%s)"
